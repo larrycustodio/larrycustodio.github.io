@@ -8,7 +8,7 @@ const PORT = 8080;
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use('./public', express.static('public'));
+app.use(express.static('public'))
 
 app.set('views', './views');
 app.set('view engine', 'ejs');
