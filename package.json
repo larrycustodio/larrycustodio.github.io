@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My personal portfolio",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server",    
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/larrycustodio/personal-portfolio.git"
+  },
+  "author": "Larry Custodio <custodio.larry@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/larrycustodio/personal-portfolio/issues"
+  },
+  "homepage": "https://github.com/larrycustodio/personal-portfolio#readme",
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
