@@ -41,7 +41,7 @@ a:visited {
 }
 
 /* * * * * * * * * * 
-    Head / NavBar 
+    Header 
 * * * * * * * * * * */
 
 .header {
@@ -50,12 +50,13 @@ a:visited {
     flex: 1 0 100%;
     flex-flow: row wrap;
     height: 7vh;
+    position: relative;
     @media all and (min-width: $width-tablet){
         height: 4em;
     }
     @media all and (min-width: $width-laptop){
         justify-content: space-between;
-        padding: 0 12.5vw;
+        padding: 0 5vw 0 12.5vw;
     }
 }
 .header__title-link {
@@ -84,21 +85,55 @@ a:visited {
         margin: auto 0;
     }
 }
+/* * * * * * * * * * 
+    Nav Bar
+* * * * * * * * * * */
+.nav__menu--button {
+    color: $color-text__header;
+    font-size: 2.25em;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    @media all and (min-width: $width-tablet){
+        font-size: 2.75em;
+    }
+    @media all and (min-width: $width-laptop){
+        display: none;
+    }
+}
 .nav__menu {
     display: none;
     @media all and (min-width: $width-laptop){
         display: flex;
-        flex-basis: 33%;
+        font-size: 1.25em;     
+        flex-basis: 50%;
+        justify-content: flex-end;
     }
 }
+.nav__menu--active {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 2.25em;
+    height: 100vh;    
+    justify-content: center;
+    position: absolute;
+    width: 35vw;    
+}
 .nav__menu--link {
-    background: rgb(30,30,30);
-    display: block;
+    color: $color-text__header;
+    display: flex;
+    margin: auto 0;
+    text-align: center;
     @media all and (min-width: $width-laptop){
-        flex: 1 0;
-        margin: auto 0;
+        align-items: center;
         height: 100%;
-        text-align: center;
+        padding: 0 1.5em 0 0.5em;
+        &:before {
+            content: '<>';
+            color: $color-text__section__h1--bracket;
+            margin-right: 0.25em;
+        }
     }
 }
 
@@ -119,7 +154,7 @@ a:visited {
     font-size: 1.625em;
     &:before {
         color: $color-text__section__h1--bracket;
-        content: '< >';
+        content: '#';
         margin-right: 0.125em;
     }
     @media all and (min-width: $width-laptop){
@@ -138,6 +173,12 @@ a:visited {
     background: $color-background__container-top;
     height: 30vh;
     position: relative;
+    @media all and (min-width: $width-tablet){
+        height: 35vh;
+    }
+    @media all and (min-width:$width-laptop){
+        height: 49vh;
+    }
 }
 
 .section-top__header {
