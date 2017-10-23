@@ -12,7 +12,10 @@ const NavBar = class {
         this.button.addEventListener('click', this.toggleMenuHandler);
     }
     toggleMenuHandler(){
-        this.menu.classList.toggle('menu--active');
+        if(this.button.offsetHeight){
+            this.menu.classList.toggle('menu--active');
+        }
+        document.addEventListener('scroll', ()=> this.menu.classList.remove('menu--active'));
     }
 };
 

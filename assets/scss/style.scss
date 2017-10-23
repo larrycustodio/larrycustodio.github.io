@@ -179,10 +179,14 @@ a:visited {
 .section--container {
     flex: 1 0 100%;
     line-height: 1.5em; 
-    padding: 3vh 10vw;
+    padding: 2.5vh 10vw;
     @media all and (min-width: $width-tablet){
-        padding: 7.5vh 12.5vw;
+        padding: 3.5vh 12.5vw;
         font-size: 125%;
+    }
+    @media all and (min-width: $width-laptop){
+        padding: 5vh 12.5vw;
+        font-size: 135%;
     }
 }
 .section__h1 {
