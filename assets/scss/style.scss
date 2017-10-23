@@ -130,26 +130,28 @@ a:visited {
         justify-content: flex-end;
     }
 }
-.nav__menu.menu--active {
-    animation: slide 450ms ease;
-    background: $color-background__navbar---active;
-    display: block;
-    font-size: 1.5em;
-    position: absolute;
-    top: 7vh;
-    width: 100%;
-    @media all and (min-width: $width-tablet){
-        font-size: 2.5em;
-    }
-    .nav__menu-link {
-        animation: fadeInDown 250ms ease forwards;
-        justify-content: center;
-        margin: 1em;
-        opacity: 0;
-        @for $i from 1 through 3 {
-            &:nth-of-type(#{$i}){
-                transform: translateY(-0.5em);                
-                animation-delay: 100ms * $i;
+@media all and (max-width: $width-laptop){
+    .nav__menu.menu--active {
+        animation: slide 450ms ease;
+        background: $color-background__navbar---active;
+        display: block;
+        font-size: 1.5em;
+        position: absolute;
+        top: 7vh;
+        width: 100%;
+        @media all and (min-width: $width-tablet){
+            font-size: 2.5em;
+        }
+        .nav__menu-link {
+            animation: fadeInDown 250ms ease forwards;
+            justify-content: center;
+            margin: 1em;
+            opacity: 0;
+            @for $i from 1 through 3 {
+                &:nth-of-type(#{$i}){
+                    transform: translateY(-0.5em);                
+                    animation-delay: 100ms * $i;
+                }
             }
         }
     }
