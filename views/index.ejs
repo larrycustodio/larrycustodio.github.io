@@ -1,8 +1,34 @@
 <% include partials/head %>
-<% include partials/header %>
-<main class='index'>
-    <div class=''>Hello, I am</div>
-    <div class=''>Larry Custodio</div>
-    <div class=''> &lt; <span class=''>web developer</span> &gt; </div>
-</main>
-<% include partials/footer %>
+    <% include partials/header %>
+        <!--End header-->
+        <section class='section--container section-top'>
+            <header class='section-top__header'>
+                <div class='section-top__header-sub'>Hello, I am</div>
+                <div class='section-top__header-title'>Larry Custodio</div>
+                <div id='subRotate' class='section-top__header-sub'>web developer</div>
+            </header>
+        </section>
+        <!-- End Top -->
+        <section class='section--container section-about'>
+            <h1 class='section__h1'>about me</h1>
+            <p>I enjoy creating modern, practical, and engaging websites and applications. My (growing!) skillset focuses on
+                full-stack Javascript -- using MongoDB, Express, React, and Node.js.</p>
+            <p>When not busy with coding, I spend my time taking flattering photos of my friends, making my own bread, and keeping up with
+                the latest news in distance running.</p>
+            <p>Check out some of my work below. If anything catches your eye then I’d be happy to hear from you through the form below,
+                or email me at: <a class='section__link' href=''>mail@larrycustod.io.</a></p>
+            <p>
+                Cheers!
+            </p>
+        </section>
+        <!-- End About -->
+        <section class='section--container section-work'>
+            <h1 class='section__h1'>my work</h1>
+        </section>
+        <!-- End Work -->
+        <section class='section--container section-contact'>
+            <h1 class='section__h1'>contact</h1>
+        </section>
+        <!-- End Contact -->
+
+        <% include partials/footer %>
