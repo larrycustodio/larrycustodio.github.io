@@ -23,19 +23,21 @@ const NavBar = class {
         document.addEventListener('scroll', () => this.menu.classList.remove('menu--active'));
     }
     onScrollHandler() {
+        const header = document.querySelector('#header');
+        const renderYPosition = document.querySelector('#hero').clientHeight - header.clientHeight;
+        const scrollPos = window.scrollY;
+        setTimeout(() => {
+            this.isThrottled = true;
+        }, 500);
         if(this.isThrottled){
-            const scrollPos = window.scrollY;
-            if(scrollPos > document.querySelector('#hero').clientHeight){
+            if(scrollPos >  renderYPosition){
                 console.log('adding');
-                document.querySelector('#header').classList.add('header--scrolled');
+                header.classList.add('header--scrolled');
             } else {
                 console.log('removing');
-                document.querySelector('#header').classList.remove('header--scrolled');
+                header.classList.remove('header--scrolled');
             }
-            this.isThrottled = !this.isThrottled;
-            setTimeout(() => {
-                this.isThrottled = true;
-            }, 500);
+            this.isThrottled = false;
         }
     }
 }

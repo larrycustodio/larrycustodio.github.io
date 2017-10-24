@@ -52,6 +52,18 @@ a:visited {
 /* * * * * * * * * * 
     Header 
 * * * * * * * * * * */
+@keyframes colorDown {
+    0% {
+        background: transparent;
+        transform: translateY(-7vh);
+        opacity: 0;
+    }
+    100% {
+        background-color: $color-background__header;        
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 .header {
     background: none;
     display: flex;
@@ -67,7 +79,7 @@ a:visited {
     }
 }
 .header--scrolled {
-    background-color: $color-background__header;    
+    animation: colorDown 0.5s ease forwards;
 }
 .header__title-link {
     color: $color-text__header;        
@@ -107,7 +119,7 @@ a:visited {
         height: 28vh;
     }
 }
-@keyframes fadeInDown {
+@keyframes fadeInRight {
     0% {
         opacity: 0;
     }
@@ -155,7 +167,7 @@ a:visited {
             font-size: 2.5em;
         }
         .nav__menu-link {
-            animation: fadeInDown 250ms ease forwards;
+            animation: fadeInRight 250ms ease forwards;
             justify-content: center;
             margin: 1em;
             opacity: 0;
