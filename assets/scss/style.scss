@@ -14,6 +14,11 @@ $color-text__container-top__sub-bottom: rgb(180,124,232);
 $color-text__section__h1:rgb(41,196,103);
 $color-text__section__h1--bracket: rgb(249,177,52);
 
+$color-text__work__title: rgb(45,45,45);
+$color-shadow__work-card: rgb(219,219,219);
+$color-text__card-action: rgb(180,124,232);
+$color-background__card-action--hover: rgb(247, 239, 255);
+
 $color-background__footer: rgb(20,104,80);
 $color-text__footer: rgb(122,200,178);
 
@@ -23,7 +28,6 @@ $width-laptop: 1024px;
 /* * * * * * * * * * 
     Main Modifiers 
 * * * * * * * * * * */
-
 * {
     box-sizing: border-box;
 }
@@ -44,7 +48,6 @@ a:visited {
 /* * * * * * * * * * 
     Header 
 * * * * * * * * * * */
-
 .header {
     background-color: $color-background__header;
     display: flex;
@@ -84,6 +87,7 @@ a:visited {
         margin: auto 0;
     }
 }
+
 /* * * * * * * * * * 
     Nav Bar
 * * * * * * * * * * */
@@ -205,10 +209,10 @@ a:visited {
     color: $color-text__section__h1;
     font-weight: 600;
 }
-/* * * * * *
-    Top Section
-* * * * * * */
 
+/* * * * * * * *
+    Top Section
+* * * * * * * * */
 .section-top {
     background: $color-background__container-top;
     height: 30vh;
@@ -221,7 +225,6 @@ a:visited {
         height: 49vh;
     }
 }
-
 .section-top__header {
     flex: 1 0 50%;
     line-height: 2.55em;
@@ -250,6 +253,56 @@ a:visited {
             content: '/>';
             margin-left: 0.25em;
         }
+    }
+}
+
+/* * * * * * * *
+    Work Section
+* * * * * * * * */
+.work-samples {
+    display: flex;
+    flex-flow: row wrap;
+}
+.work-samples__card {
+    border-radius: 0.125em;
+    box-shadow: 0 1px 2px 0px #ddd;
+    flex: 1 0 100%;
+    margin-bottom: 5%;
+    @media all and (min-width:$width-laptop){
+        flex: 1 0;
+        margin: 0 1% 1%;
+    }
+}
+.card__media {
+    width: 100%;
+}
+.card__media__img {
+    width: 100%;
+}
+.card__title {
+    color: $color-text__work__title;
+    margin:0;
+    font-weight: 400;
+}
+.card__body {
+    padding: 0.5em 0.75em;
+}
+.card__desc {
+    font-size: 0.875em;
+    margin: 0.5em 0;
+}
+.card__actions {
+    padding: 0.25em 0.5em 0.75em;
+}
+.card__action-link {
+    color: $color-text__card-action;
+    font-weight: 500;
+    padding: 0.25em 0.5em;
+    text-transform: uppercase;
+    &:active,
+    &:focus,
+    &:hover {
+        background: $color-background__card-action--hover;
     }
 }
 

@@ -229,9 +229,9 @@ a:visited {
   color: #29c467;
   font-weight: 600; }
 
-/* * * * * *
+/* * * * * * * *
     Top Section
-* * * * * * */
+* * * * * * * * */
 .section-top {
   background: #34414d;
   height: 30vh;
@@ -272,6 +272,62 @@ a:visited {
     .section-top__header-sub:last-child:after {
       content: '/>';
       margin-left: 0.25em; }
+
+/* * * * * * * *
+    Work Section
+* * * * * * * * */
+.work-samples {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap; }
+
+.work-samples__card {
+  border-radius: 0.125em;
+  -webkit-box-shadow: 0 1px 2px 0px #ddd;
+  box-shadow: 0 1px 2px 0px #ddd;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+  margin-bottom: 5%; }
+  @media all and (min-width: 1024px) {
+    .work-samples__card {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 0;
+      flex: 1 0;
+      margin: 0 1% 1%; } }
+
+.card__media {
+  width: 100%; }
+
+.card__media__img {
+  width: 100%; }
+
+.card__title {
+  color: #2d2d2d;
+  margin: 0;
+  font-weight: 400; }
+
+.card__body {
+  padding: 0.5em 0.75em; }
+
+.card__desc {
+  font-size: 0.875em;
+  margin: 0.5em 0; }
+
+.card__actions {
+  padding: 0.25em 0.5em 0.75em; }
+
+.card__action-link {
+  color: #b47ce8;
+  font-weight: 500;
+  padding: 0.25em 0.5em;
+  text-transform: uppercase; }
+  .card__action-link:active, .card__action-link:focus, .card__action-link:hover {
+    background: #f7efff; }
 
 /* * * * * *
     Footer
