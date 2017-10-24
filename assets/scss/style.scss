@@ -10,6 +10,7 @@ $color-background__container-top: rgb(52,65,77);
 $color-text__container-top__title:rgb(41,196,103);
 $color-text__container-top__sub-top: rgb(249,177,52);
 $color-text__container-top__sub-bottom: rgb(180,124,232);
+$color-blinker: rgb(224, 224, 224);
 
 $color-text__section__h1:rgb(41,196,103);
 $color-text__section__h1--bracket: rgb(249,177,52);
@@ -222,6 +223,11 @@ a:visited {
 /* * * * * * * *
     Top Section
 * * * * * * * * */
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
 .section-top {
     background: $color-background__container-top;
     height: 30vh;
@@ -255,13 +261,13 @@ a:visited {
     }
     &:last-child{
         color: $color-text__container-top__sub-bottom;
-        &:before {
-            content: '<';
-            margin-right: 0.25em;            
-        }
         &:after {
-            content: '/>';
-            margin-left: 0.25em;
+            animation: blink 1s infinite steps(1);
+            content: '|';
+            color: $color-blinker;
+            font-size: 125%;
+            font-weight: 300;
+            margin-right: 0.125em;            
         }
     }
 }
