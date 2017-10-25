@@ -294,16 +294,21 @@ a:visited {
 }
 .work-samples__card {
     border-radius: 0.125em;
-    box-shadow: 0 1px 2px 0px #ddd;
+    display: flex;
+    flex-flow: row wrap;
     flex: 1 0 100%;
-    margin-bottom: 5%;
-    @media all and (min-width:$width-laptop){
-        flex: 1 0;
-        margin: 0 1% 1%;
+    margin-bottom: 5vh;
+    &:first-of-type{
+        margin-top: 2.5vh;
     }
 }
 .card__media {
-    width: 100%;
+    display: inline-block;
+    flex-basis: 100%;
+    margin: auto;
+    @media all and (min-width: $width-laptop){
+        flex: 1 0;
+    }
 }
 .card__media__img {
     width: 100%;
@@ -313,15 +318,24 @@ a:visited {
     margin:0;
     font-weight: 400;
 }
+.card--inverse {
+    @media all and (min-width: $width-laptop) {
+        .card__media {
+            order: 1
+        }
+        .card__body {
+            order: 0;
+        }        
+    }
+}
 .card__body {
-    padding: 0.5em 0.75em;
+    flex: 1 0;
+    margin: auto;
+    padding: 1em;
 }
 .card__desc {
     font-size: 0.875em;
     margin: 0.5em 0;
-}
-.card__actions {
-    padding: 0.25em 0.5em 0.75em;
 }
 .card__action-link {
     color: $color-text__card-action;

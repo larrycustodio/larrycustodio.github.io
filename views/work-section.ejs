@@ -2,16 +2,14 @@
     <h1 class='section__h1'>my work</h1>
     <article class='section__content'>
         <div class='work-samples'>
-            <% workHighlights.forEach(workInfo => { %>
-                <div class='work-samples__card'>
+            <% workHighlights.forEach((workInfo, index) => { %>
+                <div class='work-samples__card <%= index/2==0 ? "card--inverse" : "" %>'>
                     <div class='card__media'> 
                         <img class='card__media__img' src='<%= workInfo.img %>' alt='image-screenshot' />
                     </div>
                     <div class='card__body'>
                         <h2 class='card__title'><%= workInfo.title %></h2>
                         <div class='card__desc'><%= workInfo.desc %></div>
-                    </div>
-                    <div class='card__actions'>
                         <a class='card__action-link' href='<%= workInfo.link %>'>Visit</a>
                     </div>
                 </div>
