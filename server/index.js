@@ -21,7 +21,7 @@ const data = {
             link: 'https://larrycustod.io',
             linkTag: 'you\'re here!',
             img: 'img/work__screenshot-0.png',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam sit amet quam id laoreet. Maecenas ac aliquet risus. Mauris ac metus efficitur, fermentum massa non, ultricies massa. Proin nec massa eget erat hendrerit luctus nec et sapien. Donec venenatis, turpis eu porttitor cursus, nunc leo consectetur ',
+            desc: 'Designed, developed, and deployed my own personal website. Used Sass for stylesheet management, Node.js, PM2, TravisCI, and Nginx for server-side management',
             stack: ['sass','express','node','travis','nginx']
         },
         {
@@ -30,9 +30,9 @@ const data = {
             linkTag: 'GitHub Link',
             img: 'img/work__screenshot-1.png',
             desc: 'Single page app that displays nearby breakfast spots based on preference and location. ' + 
-            'Designed graphics and UI using Adobe Illustrator, '+ 
+            'Designed graphics and UI with Adobe Illustrator, '+ 
             'used React, Node.js, and Express for client and server-side rendering, ' + 
-            'and Yelp and Google Maps API to fetch data.',
+            'and Yelp and Google Maps API for fetching data.',
             stack: ['express','react','node','travis']
         },
     ]

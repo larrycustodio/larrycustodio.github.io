@@ -26,7 +26,7 @@ a:hover,
 a:visited {
   text-decoration: none; }
 
-.text--monospace, .section__h1 {
+.text--monospace, .section__h1, .form__submit {
   font-family: "Maven Pro", "Courier", monospace; }
 
 /* * * * * * * * * * 
@@ -39,7 +39,7 @@ a:visited {
     transform: translateY(-7vh);
     opacity: 0; }
   100% {
-    background-color: #2d2d2d;
+    background-color: #333333;
     -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1; } }
@@ -50,7 +50,7 @@ a:visited {
     transform: translateY(-7vh);
     opacity: 0; }
   100% {
-    background-color: #2d2d2d;
+    background-color: #333333;
     -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1; } }
@@ -372,10 +372,83 @@ a:visited {
     background: #f7efff; }
 
 /* * * * * *
+    Contact Form
+* * * * * * */
+#section__form {
+  width: 100%;
+  margin: 0 0 2em 0; }
+  @media all and (min-width: 768px) {
+    #section__form {
+      width: 65vw; } }
+  @media all and (min-width: 1024px) {
+    #section__form {
+      width: 55vw; } }
+
+fieldset {
+  border: none;
+  display: block;
+  padding: 0; }
+
+input[type='text'],
+input[type='email'] {
+  font-family: 'Maven Pro', 'Courier', monospace; }
+
+textarea {
+  font-family: 'Maven Pro', 'Courier', monospace;
+  height: 15vh;
+  resize: none; }
+
+.form__group {
+  margin-top: 1em; }
+
+.input--status {
+  width: 1.25em;
+  height: 1.25em;
+  line-height: 1.2em;
+  background: #6babf5;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  color: #fff;
+  margin: auto;
+  text-shadow: 0px 2px 0px #5894dc; }
+
+.form__label {
+  display: inline-block;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+  margin-bottom: 0.25em; }
+
+.form__input {
+  border: 1px solid #bebebe;
+  display: inline-block;
+  width: 100%; }
+  .form__input:focus {
+    background: #f3f6f7;
+    outline: none; }
+  @media all and (min-width: 1024px) {
+    .form__input {
+      width: 100%; } }
+
+.form__submit {
+  background: none;
+  border: 1px solid #eee;
+  display: block;
+  margin: 0 auto;
+  padding: 0.5em;
+  text-transform: lowercase;
+  border-radius: 0; }
+  .form__submit:focus {
+    outline: none; }
+
+/* * * * * *
     Footer
 * * * * * * */
 .footer {
   background: #146850;
   color: #7ac8b2;
+  padding: 1vw;
   text-transform: uppercase;
   text-align: center; }

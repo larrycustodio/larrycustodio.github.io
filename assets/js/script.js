@@ -31,10 +31,8 @@ const NavBar = class {
         }, 500);
         if(this.isThrottled){
             if(scrollPos >  renderYPosition){
-                console.log('adding');
                 header.classList.add('header--scrolled');
             } else {
-                console.log('removing');
                 header.classList.remove('header--scrolled');
             }
             this.isThrottled = false;
@@ -45,22 +43,49 @@ const NavBar = class {
 const IntroHeader = class {
     constructor(typingSpeed) {
         this.tagLineElem = document.querySelector('#headerTagline');
-        this.tagLines = ['web developer', 'creative designer', 'hobby picture taker', 'is not defined', 'insert seo buzzword']
+        this.tagLines = ['web developer', 'creative designer', '', 'photography enthusiast', 'more than meets the eye', 'is not defined', '*insert seo buzzword*']
         this.tagLineLoop = 0;
         this.currentTagLineSubStr = 0;
         this.activeText = '';
+        this.activeTextLoop = 0;
         this.isRenderingText = true;
-        this.typeTagLineWord = this.typeTagLineWord.bind(this);
-        this.renderWord = setInterval(this.typeTagLineWord, 250);
+        this.typeTagLineWord(200);
     }
-    typeTagLineWord() {
-        if (this.currentTagLineSubStr <= this.tagLines[this.tagLineLoop].length) {
-            this.activeText = this.tagLines[this.tagLineLoop].substr(0, this.currentTagLineSubStr);
-            this.tagLineElem.textContent = this.activeText;
-            this.currentTagLineSubStr++;
+    typeTagLineWord(duration) {
+        this.activeText = this.tagLines[this.tagLineLoop];
+        if(this.isRenderingText){
+            //Adding subtext
+            if(this.activeTextLoop <= this.activeText.length){
+                duration = Math.random()* 150 + 75;
+                console.log(this.activeTextLoop);
+                console.log(this.activeText.length);
+                this.tagLineElem.textContent = this.activeText.substr(0,this.activeTextLoop);
+                this.activeTextLoop++;
+            } 
+            //subtext reaches max length
+            else {
+                duration = 1500;
+                this.isRenderingText = false;
+            }
         } else {
-            clearInterval(this.renderWord);
+            //decreasing subtext
+            if(this.activeTextLoop > 0){
+                duration = 75;
+                this.activeTextLoop--;
+                this.tagLineElem.textContent = this.activeText.substring(0,this.activeTextLoop);
+            } 
+            //switch to next tagline
+            else {
+                duration = 500;                
+                if(this.tagLineLoop < this.tagLines.length - 1){
+                    this.tagLineLoop++;
+                } else {
+                    this.tagLineLoop = 0;
+                }
+                this.isRenderingText = true;
+            }
         }
+        setTimeout(()=>this.typeTagLineWord(duration),duration);
     }
 }
 
