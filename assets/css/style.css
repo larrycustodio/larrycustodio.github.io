@@ -35,29 +35,17 @@ a:visited {
 * * * * * * * * * * */
 @-webkit-keyframes colorDown {
   0% {
-    background: transparent;
-    -webkit-transform: translateY(-7vh);
-    transform: translateY(-7vh);
-    opacity: 0; }
+    background-color: transparent; }
   100% {
-    background-color: #333333;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1; } }
+    background-color: #333333; } }
 @keyframes colorDown {
   0% {
-    background: transparent;
-    -webkit-transform: translateY(-7vh);
-    transform: translateY(-7vh);
-    opacity: 0; }
+    background-color: transparent; }
   100% {
-    background-color: #333333;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1; } }
+    background-color: #333333; } }
 
 .header {
-  background: none;
+  background-color: #333333;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -71,9 +59,12 @@ a:visited {
   height: 7vh;
   position: fixed;
   width: 100vw;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
   z-index: 99; }
   @media all and (min-width: 1024px) {
     .header {
+      background-color: transparent;
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between;
@@ -174,7 +165,7 @@ a:visited {
   .nav__menu.menu--active {
     -webkit-animation: slide 450ms ease;
     animation: slide 450ms ease;
-    background: #3c3c3c;
+    background-color: #3c3c3c;
     display: block;
     font-size: 1.5em;
     position: absolute;
@@ -273,7 +264,7 @@ a:visited {
     opacity: 0; } }
 
 .section-top {
-  background: #34414d;
+  background-color: #34414d;
   height: 30vh;
   position: relative;
   padding-top: 9vh; }
@@ -398,7 +389,7 @@ a:visited {
   margin: 0 auto;
   text-transform: uppercase; }
   .card__action-link:active, .card__action-link:focus, .card__action-link:hover {
-    background: #f7efff; }
+    background-color: #f7efff; }
 
 /* * * * * *
     Contact Form
@@ -407,6 +398,7 @@ a:visited {
   text-align: center; }
 
 .contacts__link {
+  color: #b47ce8;
   display: block;
   margin: 1em; }
   @media all and (min-width: 1024px) {
@@ -449,7 +441,7 @@ textarea {
   width: 1.25em;
   height: 1.25em;
   line-height: 1.2em;
-  background: #6babf5;
+  background-color: #6babf5;
   display: inline-block;
   text-align: center;
   border: 1px solid #eee;
@@ -478,14 +470,14 @@ textarea {
   display: inline-block;
   width: 100%; }
   .form__input:focus {
-    background: #f3f6f7;
+    background-color: #f3f6f7;
     outline: none; }
   @media all and (min-width: 1024px) {
     .form__input {
       width: 100%; } }
 
 .form__submit {
-  background: none;
+  background-color: none;
   border: 1px solid #eee;
   display: block;
   margin: 0 auto;
@@ -499,7 +491,7 @@ textarea {
     Footer
 * * * * * * */
 .footer {
-  background: #146850;
+  background-color: #146850;
   color: #7ac8b2;
   padding: 1vw;
   text-transform: uppercase;

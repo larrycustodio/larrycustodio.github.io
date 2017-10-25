@@ -32,7 +32,6 @@ const data = {
             desc: 'Personalized portfolio website to wrap everything up ',
             stack: ['sass','express','node','travis','nginx']
         },
-
     ]
 }
 
