@@ -17,24 +17,22 @@ const data = {
     currentYear: new Date().getFullYear().toString(),
     workHighlights: [
         {
-            title: 'Portfolio Website',
-            link: 'https://larrycustod.io',
-            linkTag: 'you\'re here!',
-            img: 'img/work__screenshot-0.png',
-            desc: 'Designed, developed, and deployed my own personal website. Used Sass for stylesheet management, Node.js, PM2, TravisCI, and Nginx for server-side management',
-            stack: ['sass','express','node','travis','nginx']
-        },
-        {
             title: 'Breakfast Finder',
             link: 'https://github.com/larrycustodio/breakfast-finder',
             linkTag: 'GitHub Link',
             img: 'img/work__screenshot-1.png',
-            desc: 'Single page app that displays nearby breakfast spots based on preference and location. ' + 
-            'Designed graphics and UI with Adobe Illustrator, '+ 
-            'used React, Node.js, and Express for client and server-side rendering, ' + 
-            'and Yelp and Google Maps API for fetching data.',
+            desc: 'Interactive breakfast place finder using React, Yelp, and Google Maps API',
             stack: ['express','react','node','travis']
+        },        
+        {
+            title: 'Portfolio Website',
+            link: 'https://larrycustod.io',
+            linkTag: 'you\'re here!',
+            img: 'img/work__screenshot-0.png',
+            desc: 'Personalized portfolio website to wrap everything up ',
+            stack: ['sass','express','node','travis','nginx']
         },
+
     ]
 }
 

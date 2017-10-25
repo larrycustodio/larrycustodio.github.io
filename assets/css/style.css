@@ -378,16 +378,24 @@ a:visited {
   -ms-flex: 1 0;
   flex: 1 0;
   margin: auto;
-  padding: 1em; }
+  padding: 1em;
+  text-align: center; }
+  @media all and (min-width: 1024px) {
+    .card__body {
+      text-align: left; } }
 
 .card__desc {
   font-size: 0.875em;
   margin: 0.5em 0; }
 
+.card__actions {
+  text-align: center; }
+
 .card__action-link {
   color: #b47ce8;
   font-weight: 500;
   padding: 0.25em 0.5em;
+  margin: 0 auto;
   text-transform: uppercase; }
   .card__action-link:active, .card__action-link:focus, .card__action-link:hover {
     background: #f7efff; }

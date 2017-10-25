@@ -332,15 +332,23 @@ a:visited {
     flex: 1 0;
     margin: auto;
     padding: 1em;
+    text-align: center;
+    @media all and (min-width: $width-laptop){
+        text-align: left;
+    }
 }
 .card__desc {
     font-size: 0.875em;
     margin: 0.5em 0;
 }
+.card__actions {
+    text-align: center;
+}
 .card__action-link {
     color: $color-text__card-action;
     font-weight: 500;
     padding: 0.25em 0.5em;
+    margin: 0 auto;
     text-transform: uppercase;
     &:active,
     &:focus,
