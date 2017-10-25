@@ -89,6 +89,19 @@ const IntroHeader = class {
     }
 }
 
-const nav = new NavBar();
+class contactForm {
+    constructor(){
+        this.inputName = document.querySelector('#name');
+        this.inputEmail = document.querySelector('#email');
+        this.inputMessage = document.querySelector('#inMessage');
+        this.sendButton = document.querySelector('#inSend');
+        this.onFormSubmit = this.sendButton.addEventListener('click',this.handleFormSubmit);
+    }
+    handleFormSubmit(e){
+        e.preventDefault();
+    }
+} 
 
+const nav = new NavBar();
 const intro = new IntroHeader();
+const contactForm = new contactForm();
