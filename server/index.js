@@ -42,6 +42,9 @@ app.get('/', (req,res) => {
     res.render('index', data);
 });
 
+app.post('/thanks', (req,res) => {
+    res.render('thanks', {contact: req.body});
+});
 app.listen(PORT,()=>{
     console.log('Listening on localhost:'+PORT);
 })

@@ -24,7 +24,8 @@ a:active,
 a:focus,
 a:hover,
 a:visited {
-  text-decoration: none; }
+  text-decoration: none;
+  outline: none; }
 
 .text--monospace, .section__h1, .form__submit {
   font-family: "Maven Pro", "Courier", monospace; }
@@ -374,20 +375,35 @@ a:visited {
 /* * * * * *
     Contact Form
 * * * * * * */
+.section__contacts {
+  text-align: center; }
+
+.contacts__link {
+  display: block;
+  margin: 1em; }
+  @media all and (min-width: 1024px) {
+    .contacts__link {
+      display: inline-block; } }
+
 #section__form {
   width: 100%;
-  margin: 0 0 2em 0; }
+  margin: 0 auto 2em; }
   @media all and (min-width: 768px) {
     #section__form {
       width: 65vw; } }
   @media all and (min-width: 1024px) {
     #section__form {
+      margin: inherit 0;
       width: 55vw; } }
 
 fieldset {
   border: none;
   display: block;
-  padding: 0; }
+  padding: 0;
+  text-align: center; }
+  @media all and (min-width: 1024px) {
+    fieldset {
+      text-align: left; } }
 
 input[type='text'],
 input[type='email'] {
@@ -413,6 +429,14 @@ textarea {
   color: #fff;
   margin: auto;
   text-shadow: 0px 2px 0px #5894dc; }
+
+.status--invalid {
+  background-color: #c50000;
+  text-shadow: 0px 2px 0px #710000; }
+
+.status--valid {
+  background-color: #73c1ab;
+  text-shadow: 0px 2px 0px #00825d; }
 
 .form__label {
   display: inline-block;
