@@ -106,7 +106,7 @@ class ContactForm {
 
     }
     handleSubmit(e){
-        e.preventDefault();
+        //e.preventDefault();
         console.log(this.formInputVals);
     }
     handleInputs(e){
