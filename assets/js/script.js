@@ -103,10 +103,11 @@ class ContactForm {
         this.onFormSubmit = this.form.addEventListener('submit',this.handleSubmit.bind(this));
     }
     handleSubmit(e){
-        const myForm = this.form
-        const formData = new FormData(myForm);
-        e.preventDefault();
-        console.log(formData);
+        console.log(e);
+        // ajax.open('POST','/contact', true);
+        // ajax.send(formData);
+        // const formData = new FormData(this.form);
+        // console.log(xhr.response);
     }
     handleInputs(e){
         this.formInputVals[e.target.name] = e.target.value;
