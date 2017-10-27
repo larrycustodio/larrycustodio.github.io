@@ -89,6 +89,7 @@ const IntroHeader = class {
 
 class ContactForm {
     constructor(){
+        this.form = document.querySelector('#form');
         this.formInputElems = document.querySelectorAll('.form__input');
         this.sendButton = document.querySelector('#sendForm');
         this.formInputVals = {
@@ -99,10 +100,13 @@ class ContactForm {
         this.formInputElems.forEach(elem => {
             elem.addEventListener('change',this.handleInputs.bind(this));
         });
-        this.onFormSubmit = this.sendButton.addEventListener('click',this.handleSubmit.bind(this));
+        this.onFormSubmit = this.form.addEventListener('submit',this.handleSubmit.bind(this));
     }
     handleSubmit(e){
-        console.log(this.formInputVals);
+        const myForm = this.form
+        const formData = new FormData(myForm);
+        e.preventDefault();
+        console.log(formData);
     }
     handleInputs(e){
         this.formInputVals[e.target.name] = e.target.value;
