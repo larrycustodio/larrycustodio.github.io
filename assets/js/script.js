@@ -89,41 +89,24 @@ const IntroHeader = class {
 
 class ContactForm {
     constructor(){
-        this.formInputElems = [document.querySelector('#inName'), document.querySelector('#inEmail'),document.querySelector('#inMessage')];
-        this.sendButton = document.querySelector('#inSend');
+        this.formInputElems = document.querySelectorAll('.form__input');
+        this.sendButton = document.querySelector('#sendForm');
         this.formInputVals = {
-            name: '',
-            email: '',
-            message: ''
+            first_name: '',
+            last_name: '',
+            email: ''
         }
-        
         this.formInputElems.forEach(elem => {
             elem.addEventListener('change',this.handleInputs.bind(this));
-            elem.addEventListener('focusout',this.handleFocus.bind(this));
         });
-        
         this.onFormSubmit = this.sendButton.addEventListener('click',this.handleSubmit.bind(this));
-
     }
     handleSubmit(e){
-        //e.preventDefault();
+        e.preventDefault();
         console.log(this.formInputVals);
     }
     handleInputs(e){
         this.formInputVals[e.target.name] = e.target.value;
-    }
-    handleFocus(e){
-        const isValid = !e.srcElement.validity.typeMismatch && e.srcElement.validity.valid;
-        const statusDisplay = e.target.parentNode.children[0]
-        if(isValid){
-            statusDisplay.textContent = '✓';
-            statusDisplay.classList.add('status--valid');
-            statusDisplay.classList.remove('status--invalid');            
-        } else {
-            statusDisplay.textContent = '✗';
-            statusDisplay.classList.add('status--invalid');
-            statusDisplay.classList.remove('status--valid');
-        }
     }
 } 
 
