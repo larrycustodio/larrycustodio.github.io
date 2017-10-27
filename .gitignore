@@ -11,12 +11,14 @@ pids
 *.seed
 *.pid.lock
 
+# Server config
+server/index.js
+
 # Bower dependency directory (https://bower.io/)
 bower_components
 
 # Distribution folder
 dist/
-server/
 
 node_modules/
 jspm_packages/
