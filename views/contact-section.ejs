@@ -14,7 +14,8 @@
                     <span class='heading__circle yellow'></span>
                     <span class='heading__circle green'></span>
                 </span>
-            ~/contact-form -- how can I reach you?</div>
+                ~/contact-form -- how can I reach you?
+            </div>
             <fieldset class='form__fieldset text--monospace'>
                 <div class='form__caption'><%= new Date() %></div>
                 <div class='form__group'>
@@ -29,7 +30,10 @@
                     <label for='email_address' class='form__label'>email</label>
                     <input name='email' type='email' id='email' class='form__input' required />
                 </div>
-                <button type='submit' id='sendForm' class='form__submit'>Send</button>
+                <div class='form__group'>
+                    <button type='submit' id='sendForm' class='form__button form__submit'>Send</button>
+                    <button type='reset' id='sendForm' class='form__button form__reset'>Reset</button>
+                </div>
             </fieldset>
         </form>
     </article>

@@ -102,7 +102,6 @@ class ContactForm {
         this.onFormSubmit = this.sendButton.addEventListener('click',this.handleSubmit.bind(this));
     }
     handleSubmit(e){
-        e.preventDefault();
         console.log(this.formInputVals);
     }
     handleInputs(e){
