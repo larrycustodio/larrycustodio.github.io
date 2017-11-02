@@ -3,11 +3,10 @@ const NavBar = class {
         this.button = document.querySelector('#navButton');
         this.menu = document.querySelector('#navMenu');
         this.menuLinks = document.querySelectorAll('.nav__menu-link');
+        this.menuOverlay = document.querySelector('#activeMenuOverlay');
+
         this.toggleMenuHandler = this.toggleMenuHandler.bind(this);
-        this.toggleMobileMenu = this.toggleMenu();
-        this.onScrollHandler = this.onScrollHandler.bind(this);
-        this.scrollNavBarRender = window.addEventListener('scroll', this.onScrollHandler);
-        this.isThrottled = true;
+        this.toggleMobileMenu = this.toggleMenu();    
     }
     toggleMenu() {
         for (let list = 0; list < this.menuLinks.length; list++) {
@@ -18,32 +17,14 @@ const NavBar = class {
     toggleMenuHandler() {
         if (this.button.offsetHeight) {
             this.menu.classList.toggle('menu--active');
-        }
-        document.addEventListener('scroll', () => this.menu.classList.remove('menu--active'));
-    }
-    onScrollHandler() {
-        if(!this.button.offsetHeight){
-            const header = document.querySelector('#header');
-            const renderYPosition = document.querySelector('#hero').clientHeight - header.clientHeight;
-            const scrollPos = window.scrollY;
-            setTimeout(() => {
-                this.isThrottled = true;
-            }, 500);
-            if(this.isThrottled){
-                if(scrollPos >  renderYPosition){
-                    header.classList.add('header--scrolled');
-                } else {
-                    header.classList.remove('header--scrolled');
-                }
-                this.isThrottled = false;
-            }
+            this.menuOverlay.classList.toggle('menu-overlay--active');
         }
     }
 }
 const IntroHeader = class {
     constructor(typingSpeed) {
         this.tagLineElem = document.querySelector('#headerTagline');
-        this.tagLines = ['web developer', 'creative designer', 'react builder', 'photography enthusiast', '*insert seo buzzwords*']
+        this.tagLines = ['web developer', 'creative designer', 'javascript developer', 'react builder', 'photographer', '*insert seo buzzwords*']
         this.tagLineLoop = 0;
         this.currentTagLineSubStr = 0;
         this.activeText = '';
@@ -62,7 +43,7 @@ const IntroHeader = class {
             } 
             //subtext reaches max length
             else {
-                duration = 1500;
+                duration = 2000;
                 this.isRenderingText = false;
             }
         } else {

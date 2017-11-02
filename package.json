@@ -34,9 +34,7 @@
     "nodemon": "^1.12.1"
   },
   "dependencies": {
-    "axios": "^0.17.0",
     "mailchimp-api-3": "0.0.9",
-    "mailchimp-api-v3": "^1.7.1",
-    "superagent": "^3.8.0"
+    "mailchimp-api-v3": "^1.7.1"
   }
 }

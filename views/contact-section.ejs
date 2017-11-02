@@ -8,27 +8,22 @@
             <a class='contacts__link' href='https://codepen.io/larrycustodio/' target='_blank'>codepen.com/larrycustodio</a>
         </div>
         <form id='form' action='/contact' method='post' class='section__form'>
-            <div class='form__heading'>
-                <span class='heading__circle__container'>
-                    <span class='heading__circle red'></span>
-                    <span class='heading__circle yellow'></span>
-                    <span class='heading__circle green'></span>
-                </span>
-                &#128222; larrycustodio ~/contact-form -- how can I reach you?
-            </div>
             <fieldset class='form__fieldset text--monospace'>
-                <div class='form__caption'><%= new Date() %></div>
                 <div class='form__group'>
-                    <label for='name' class='form__label'>First-name</label>
+                    <label for='name' class='form__label'>First Name</label>
                     <input name='first_name' type='text' id='firstname' class='form__input' required />
                 </div>
                 <div class='form__group'>
-                    <label for='name' class='form__label'>Last-name</label>
+                    <label for='name' class='form__label'>Last Name</label>
                     <input name='last_name' type='text' id='lastname' class='form__input' required />
                 </div>
                 <div class='form__group'>
-                    <label for='email_address' class='form__label'>Email</label>
+                    <label for='email' class='form__label'>E-mail</label>
                     <input name='email' type='email' id='email' class='form__input' required />
+                </div>
+                <div class='form__group group-message'>
+                    <label for='message' class='form__label'>Your message</label>
+                    <textarea name='message' id='message' class='form__input'></textarea>
                 </div>
                 <div class='form__group form__group-buttons'>
                     <button type='submit' id='sendForm' class='form__button form__submit'>Send</button>
