@@ -19,6 +19,7 @@ const NavBar = class {
             this.menu.classList.toggle('menu--active');
             this.menuOverlay.classList.toggle('menu-overlay--active');
         }
+
     }
 }
 const IntroHeader = class {
@@ -79,19 +80,23 @@ class ContactForm {
             email: ''
         }
         this.formInputElems.forEach(elem => {
-            elem.addEventListener('change',this.handleInputs.bind(this));
+            elem.addEventListener('change',this.handleInputChange.bind(this));
+            elem.addEventListener('focus',this.handleInputFocus.bind(this));
+            elem.addEventListener('focusout',this.handleInputFocusOut.bind(this));
         });
-        this.onFormSubmit = this.form.addEventListener('submit',this.handleSubmit.bind(this));
     }
-    handleSubmit(e){
-        console.log(e);
-        // ajax.open('POST','/contact', true);
-        // ajax.send(formData);
-        // const formData = new FormData(this.form);
-        // console.log(xhr.response);
-    }
-    handleInputs(e){
+    handleInputChange(e){
         this.formInputVals[e.target.name] = e.target.value;
+    }
+    handleInputFocus(e){
+        e.target.placeholder = '';
+        e.target.previousElementSibling.classList.add('form__label-focus');
+    }
+    handleInputFocusOut(e){
+        if(!e.target.value){
+            e.target.previousElementSibling.classList.remove('form__label-focus');
+            e.target.placeholder = e.target.name.toLowerCase().replace(/\_/g,' ');
+        }
     }
 } 
 
