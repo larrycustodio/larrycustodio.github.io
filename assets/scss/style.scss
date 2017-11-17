@@ -1,6 +1,7 @@
 /* * * * * * * * * * 
     Variables 
 * * * * * * * * * * */
+$theme-green: rgb(41,196,103);
 $color-background__menu--overlay: rgba(39, 39, 39, 0.6);
 $color-background__header: rgb(52,65,77);
 $color-text__header: rgb(204,204,204);
@@ -433,6 +434,17 @@ a:visited {
 /* * * * * *
     Footer
 * * * * * * */
+.contact__icon {
+    height: 4em;
+    color: $theme-green;
+    fill: $theme-green;
+    transition: transform 0.4s ease;
+    &:hover,
+    &:focus {
+        transform: scale(1.15);
+    }
+}
+
 .footer {
     background-color: $color-background__footer;
     color: $color-text__footer;

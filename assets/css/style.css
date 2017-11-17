@@ -463,6 +463,18 @@ a:visited {
 /* * * * * *
     Footer
 * * * * * * */
+.contact__icon {
+  height: 4em;
+  color: #29c467;
+  fill: #29c467;
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease; }
+  .contact__icon:hover, .contact__icon:focus {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15); }
+
 .footer {
   background-color: #146850;
   color: #7ac8b2;
