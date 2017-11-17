@@ -25,7 +25,7 @@ const NavBar = class {
 const IntroHeader = class {
     constructor(typingSpeed) {
         this.tagLineElem = document.querySelector('#headerTagline');
-        this.tagLines = ['web developer', 'creative designer', 'javascript developer', 'react builder', 'photographer', '*insert seo buzzwords*']
+        this.tagLines = ['web developer', 'creative designer', 'javascript developer', 'react builder', 'photographer']
         this.tagLineLoop = 0;
         this.currentTagLineSubStr = 0;
         this.activeText = '';
