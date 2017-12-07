@@ -1,0 +1,35 @@
+/* * * * * * * * *
+ * Top Bar View
+ * * * * * * * * */
+.header-top {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    font-size: 1.5em;
+    padding: 0.5em 0.75em;
+}
+
+.nav-menu__button {
+    @include media-screen(768px){
+        display: none;
+    }
+}
+
+.nav-menu {
+
+}
+
+.menu__link {
+    color: rgb(128, 140, 153);
+    text-decoration: none;
+}
+.nav--hide {
+    display: none;
+    @include media-screen(768px){
+        display: inline-block;
+    }
+}
+
+/* * * * * * * * *
+ * Header View
+ * * * * * * * * */

@@ -9,36 +9,36 @@ const nodemon = require('gulp-nodemon');
 const browserSync = require('browser-sync').create();
 
 gulp.task('sass', () => {
-    return gulp.src('assets/scss/**/*.scss')
+    return gulp.src('src/scss/*.scss')
         .pipe(sass())
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest('assets/css'))
+        .pipe(gulp.dest('dist/css'))
 });
 
 gulp.task('css', ['sass'], () => {
-    return gulp.src('assets/css/**/*.css')
+    return gulp.src('dist/css/**/*.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('public/css'))
+    .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.stream());    
 });
 
 gulp.task('js', () => {
-    return gulp.src('assets/js/**/*.js')
+    return gulp.src('src/js/**/*.js')
     .pipe(babel({
         presets: ['env']
     }))
     .pipe(uglify())
     .pipe(concat('script.min.js'))
-    .pipe(gulp.dest('public/js'))
+    .pipe(gulp.dest('dist/js'))
     .pipe(browserSync.stream());    
 });
 
 gulp.task('watch', () => {
-    gulp.watch('assets/scss/*.scss', ['sass','css']);
-    gulp.watch('assets/js/*.js', ['js']);
+    gulp.watch('src/scss/*.scss', ['sass','css']);
+    gulp.watch('src/js/*.js', ['js']);
 })
 
 gulp.task('serve', () => {

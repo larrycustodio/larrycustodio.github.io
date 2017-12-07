@@ -1,0 +1,8 @@
+@mixin media-screen($width) {
+    @media screen and (min-width:$width) {
+        @content;
+    }
+}
+
+@import 'partials/base';
+@import 'partials/header';
