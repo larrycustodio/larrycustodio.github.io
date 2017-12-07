@@ -9,7 +9,7 @@ const nodemon = require('gulp-nodemon');
 const browserSync = require('browser-sync').create();
 
 gulp.task('sass', () => {
-    return gulp.src('src/scss/*.scss')
+    return gulp.src('src/scss/**/*.scss')
         .pipe(sass())
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
@@ -37,7 +37,7 @@ gulp.task('js', () => {
 });
 
 gulp.task('watch', () => {
-    gulp.watch('src/scss/*.scss', ['sass','css']);
+    gulp.watch('src/scss/**/*.scss', ['sass','css']);
     gulp.watch('src/js/*.js', ['js']);
 })
 
