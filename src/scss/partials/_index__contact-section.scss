@@ -1,7 +1,12 @@
-.section__contact-index {
-    .section__content {
-        font-size: 2em;
-        line-height: 1.75em;
-        padding: 1em 0.75em;
+.section-contact {
+    font-size: 1.5em;
+    line-height: 1.75em;
+    padding: 6% 5%;
+    @include media-screen(768px){
+        font-size: 1.75em;
+        padding: 3% 8.5%;
+    }
+    @include media-screen(1024px){
+        padding: 10% 8%;
     }
 }

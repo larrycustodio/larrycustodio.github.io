@@ -1,0 +1,42 @@
+.footer {
+    background: rgb(234,234,234);
+    font-size: 1.25em;    
+    padding: 7% 5%;
+    text-align: center;    
+    @include media-screen(768px){
+        text-align: left;        
+        padding: 2% 8.5%;
+    }
+    @include media-screen(1024px){
+        padding: 2% 7.5%;
+    }
+}
+
+.footer__nav-links {
+    .nav-links {
+        padding: 0;
+        & > li {
+            display: inline-block;
+            list-style: none;
+            padding: 0.5% 2.5%;
+        }
+    }
+    @include media-screen(768px){
+        display: inline-block;
+        width: 49%;
+    }
+}
+
+.quick-links__icons {
+    svg {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+    }
+    @include media-screen(768px){
+        display: inline-block;
+        width: 49%;        
+        text-align: right;
+        transform: translateY(12px);
+    }
+}
