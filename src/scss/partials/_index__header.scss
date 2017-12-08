@@ -1,0 +1,105 @@
+/* * * * * * * * *
+ * Top Bar View
+ * * * * * * * * */
+.header-top {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    font-size: 1em;
+    padding: 0.875em 1.67em;
+    @include media-screen(768px){
+        padding: 1.5em 1.67em;
+    }
+    @include media-screen(1280px){
+        font-size: 1.75em;
+        padding: 2.5em 3.35em;
+    }
+}
+.nav-menu__button {
+    @include media-screen(768px){
+        display: none;
+    }
+}
+.menu__link {
+    color: rgb(128, 140, 153);
+    padding: 0 0.75em;
+    text-decoration: none;
+    &.link-active {
+        color: rgb(34, 174, 220);
+        font-weight: 800;
+    }
+}
+.nav--hide {
+    display: none;
+    @include media-screen(768px){
+        display: inline-block;
+    }
+}
+
+/* * * * * * * * *
+ * Header View
+ * * * * * * * * */
+ .section-top {
+     padding: 1.25em 2.5em;
+     @include media-screen(768px){
+        height: 30vh;
+     }
+     @include media-screen(1280px){
+        height: 55vh;
+        padding: 1.35em 5.75em;
+     }
+ }
+ .section-top__header-title {
+     font-size: 2.25em;
+     font-weight: 800;
+     margin: 0.5em 0;
+     @include media-screen(768px){
+        font-size: 2.75em;
+     }
+     @include media-screen(1280px){
+        font-size: 4em;
+     }
+ }
+ .section-top__header-sub {
+    font-size: 1.0em;
+    line-height: 1.75em;
+    @include media-screen(768px){
+        font-size: 1.75em;
+        line-height: 1.45em;        
+     }
+     @include media-screen(1280px){
+        font-size: 1.35em;
+     }
+ }
+.section-top__header-links {
+    margin-top: 1em;
+}
+
+.link__icon svg {
+     fill: rgb(101, 84, 84);
+ }
+ .icon__svg-path {
+     width: 55px;
+     height: 55px;
+     @include media-screen(768px){
+         width: 65px;
+         height: 65px;
+     }
+ }
+ .link__icon-text {
+    background: rgb(126, 159, 185);
+    border-radius: 28px;
+    color: #fff;
+    display: block;
+    letter-spacing: 3px;
+    margin: 0.75em 0;
+    padding: 0.85em 1.5em;
+    text-align: center;
+    @include media-screen(768px){
+        display: inline-block;
+        max-width: 350px;
+        margin: 0.5em 0;
+        padding: 0.5em 1em;
+        font-size: 1.35em;
+    }
+ }

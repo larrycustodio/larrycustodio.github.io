@@ -1,0 +1,21 @@
+<section id="work" class='section--container section-work'>
+    <article class='section__content'>
+        <div class='work-samples'>
+            <% workHighlights.forEach(info => { %>
+                <div class='work-sample'>
+                    <figure class='sample__figure'>
+                        <img class='sample__img' src='assets/img/pic-sample.png' alt='image-screenshot'>
+                        <figcaption class='sample__body'>
+                            <div class='work-sample__title'><%= info.title %></div>
+                            <div class='work-sample__link'>
+                                <a class='card__action-link' href='<%= info.link %>' target='_blank'>
+                                <%= info.linkTag %>
+                                </a>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+                <% }) %>
+        </div>
+    </article>
+</section>

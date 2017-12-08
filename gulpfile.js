@@ -39,6 +39,7 @@ gulp.task('js', () => {
 gulp.task('watch', () => {
     gulp.watch('src/scss/**/*.scss', ['sass','css']);
     gulp.watch('src/js/*.js', ['js']);
+    gulp.watch('views/**/*.ejs');
 })
 
 gulp.task('serve', () => {

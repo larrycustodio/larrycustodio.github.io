@@ -1,0 +1,31 @@
+<section id="contact" class='section--container section-contact'>
+    <h1 class='section__h1'>contact</h1>
+    <article class='section__content'>
+        Shoot me a message at: <a href='mailto:hello@larrycustod.io'> hello@larrycustod.io </a>
+        <p>Or drop a message below!</p>
+        <form id='form' action='/contact' method='post' class='section__form'>
+            <fieldset class='form__fieldset text--monospace'>
+                <div class='form__group'>
+                    <label for='name' class='form__label'>First Name</label>
+                    <input name='first_name' type='text' id='firstname' class='form__input' placeholder='first name' required />
+                </div>
+                <div class='form__group'>
+                    <label for='name' class='form__label'>Last Name</label>
+                    <input name='last_name' type='text' id='lastname' class='form__input' placeholder='last name' required />
+                </div>
+                <div class='form__group'>
+                    <label for='email' class='form__label'>E-mail</label>
+                    <input name='email' type='email' id='email' class='form__input' placeholder='email' required />
+                </div>
+                <div class='form__group group-message'>
+                    <label for='message' class='form__label'>Your message</label>
+                    <textarea name='message' id='message' class='form__input' placeholder='your message'></textarea>
+                </div>
+                <div class='form__group form__group-buttons'>
+                    <button type='submit' id='sendForm' class='form__button form__submit'>Send</button>
+                    <button type='reset' class='form__button form__reset'>Reset</button>
+                </div>
+            </fieldset>
+        </form>
+    </article>
+</section>
