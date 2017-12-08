@@ -1,22 +1,28 @@
-//Navbar
-//Work Section - Index
-// const workFigures = document.querySelectorAll('.work-sample');
+const contactForm = document.querySelector('#contactFormContainer');
+const onContactFormShowHandler = event => {
+    event.preventDefault();    
+    contactForm.classList.remove('contact-form--hide');    
+    contactForm.classList.add('contact-form--show');
+}
+const onContactFormCloseHandler = event => {
+    contactForm.classList.add('contact-form--hide');
+    setTimeout(()=>{contactForm.classList.remove('contact-form--show')},950);        
+}
+const onContactFormSubmitHandler = event => {
+    event.preventDefault();
+}
 
-// const onFigureHoverHandler = event => {
-//     const img = event.target.children[0];
-//     const child = event.target.nextElementSibling;
-//     if(!!img && img.tagName == 'IMG') img.classList.add('sample__img--hover');
-//     if(!!child && child.tagName == 'FIGCAPTION') child.classList.add('sample__body--hover');
-// }
 
-// const onFigureHoverOutHandler = event => {
-//     const img = event.target;
-//     const child = event.target.nextElementSibling;
-//     if(!!img && img.tagName == 'IMG') img.classList.remove('sample__img--hover');
-//     if(!!child && child.tagName == 'FIGCAPTION') child.classList.remove('sample__body--hover');
-// }
+const indexContactFormToggler = document.querySelector('#indexContactButtons');
+const navBarContactFormToggler = document.querySelector('#contactMenuLink');
+const footerContactFormToggler = document.querySelector('#footerContactFormToggler');
+const contactTogglers = [indexContactFormToggler, navBarContactFormToggler, footerContactFormToggler];
+const contactFormClose = document.querySelector('#contactFormClose');
 
-// workFigures.forEach(figure => {
-//     figure.addEventListener('mouseover', onFigureHoverHandler);
-//     figure.addEventListener('mouseout', onFigureHoverOutHandler);    
-// })
+for(let contactToggler of contactTogglers){
+    contactToggler.addEventListener('click', onContactFormShowHandler);
+}
+
+contactFormClose.addEventListener('click', onContactFormCloseHandler);
+
+contactForm.addEventListener('submit', onContactFormSubmitHandler);

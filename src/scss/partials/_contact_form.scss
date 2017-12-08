@@ -1,6 +1,30 @@
+@keyframes slideDownShow {
+    0%{
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideDownHide{
+    0%{
+        transform: translateY(0%);        
+    }
+    100%{
+        transform: translateY(10%);
+    }
+}
 .container__contact-form {
     display: none;
     background-color: rgba(189, 189, 189, 0.43);
+    grid-template-columns: 1fr 90% 1fr;
+    grid-template-rows: .5fr 55vh 1fr; 
+    grid-template-areas:
+    ". . ."
+    ". form ."
+    ". . .";
     position: fixed;
     height: 100%;
     left: 0;
@@ -8,6 +32,68 @@
     width: 100%;
     z-index: 2;
 }
+.contact-form--show {
+    display: grid;
+}
+.contact-form--hide {
+    opacity: 0;
+    transition: opacity 1000ms ease;
+    .contact-form{
+        animation: slideDownHide 1000ms cubic-bezier(0.17, 0, 0, 1) forwards;
+    }    
+}
+.contact-form__close{
+    padding: 0.5em 1em;
+    font-size: 1.45em;
+    text-align: right;
+}
+.contact-info{
+    align-self: center;
+    padding: 0.5em 1em;
+}
+.contact-form__link {
+    font-weight: 800;
+}
 .contact-form {
-    
+    animation: slideDownShow 1000ms cubic-bezier(0.17, 0, 0, 1) forwards;    
+    background-color: rgb(255,255,255);
+    border-radius: 5px;
+    grid-area: form;
+    .form-group {
+        border: 1px solid rgb(215, 215, 215);
+        border-radius: 3px;
+        margin: 1em;
+        padding: 0.5em;
+        input,
+        textarea {
+            border: none;
+            color: rgb(215, 215, 215);            
+            outline: none;
+            resize: none;            
+            text-transform: uppercase;            
+            width: 97%;
+        }
+    }
+    .form-input {
+        border: 1px solid rgb(215, 215, 215);        
+        margin: 0;        
+        &:focus {
+            color: rgb(105, 105, 105);            
+        }
+    }
+    .button-submit {
+        background-color: rgba(255,255,255,0);
+        border: 1px solid rgb(215, 215, 215);
+        color: rgb(215, 215, 215);
+        display: block;
+        margin: 1em auto;
+        padding: 0.5em;
+        width: 50%;
+        &:hover,
+        &:focus {
+            border: 1px solid rgb(105, 105, 105);            
+            color: rgb(105, 105, 105);            
+            outline: none;
+        }
+    }
 }

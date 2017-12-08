@@ -24,8 +24,7 @@
     padding: 0 0.5em;
     text-decoration: none;
     &.link-active {
-        color: rgb(34, 174, 220);
-        font-weight: 800;
+        color: rgb(65, 166, 199);
     }
     @include media-screen(768px){
         padding: 0 0.85em;        

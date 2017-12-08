@@ -34,21 +34,4 @@
          width: 65px;
          height: 65px;
      }
- }
- .link__icon-text {
-    background: rgb(126, 159, 185);
-    border-radius: 28px;
-    color: #fff;
-    display: block;
-    letter-spacing: 3px;
-    margin: 0.75em 0;
-    padding: 0.85em 1.5em;
-    text-align: center;
-    @include media-screen(768px){
-        display: inline-block;
-        max-width: 350px;
-        margin: 0.5em 0;
-        padding: 0.5em 1em;
-        font-size: 1.35em;
-    }
- }
+}
