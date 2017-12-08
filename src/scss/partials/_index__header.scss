@@ -1,46 +1,4 @@
-/* * * * * * * * *
- * Top Bar View
- * * * * * * * * */
-.header-top {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    font-size: 1.45em;
-    padding: 5%;
-    @include media-screen(768px){
-        font-size: 1.35em;    
-        padding: 4.5% 8.5%;
-    }
-    @include media-screen(1280px){
-        font-size: 1.65em;
-        padding: 5% 8%;
-    }
-}
-.nav-menu__button {
-    @include media-screen(768px){
-        display: none;
-    }
-}
-.menu__link {
-    color: rgb(128, 140, 153);
-    padding: 0 0.75em;
-    text-decoration: none;
-    &.link-active {
-        color: rgb(34, 174, 220);
-        font-weight: 800;
-    }
-}
-.nav--hide {
-    display: none;
-    @include media-screen(768px){
-        display: inline-block;
-    }
-}
-
-/* * * * * * * * *
- * Header View
- * * * * * * * * */
- .section-top__header-title {
+.section-top__header-title {
      font-size: 2.25em;
      font-weight: 800;
      margin: 0.5em 0;
