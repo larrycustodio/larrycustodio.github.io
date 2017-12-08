@@ -1,12 +1,12 @@
 .section-contact {
     font-size: 1.5em;
     line-height: 1.75em;
-    padding: 6% 5%;
+    padding: 6% inherit;
     @include media-screen(768px){
         font-size: 1.75em;
-        padding: 3% 8.5%;
+        padding: 3% inherit;
     }
     @include media-screen(1024px){
-        padding: 10% 8%;
+        padding: 10% inherit;
     }
 }

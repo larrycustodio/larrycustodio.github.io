@@ -9,3 +9,13 @@
      color: inherit;
      text-decoration: inherit;
  }
+
+ .section--container {
+    padding: 5%;
+    @include media-screen(768px){
+        padding: 4.5% 8.5%;
+    }
+    @include media-screen(1280px){
+        padding: 5% 8%;
+    }
+ }

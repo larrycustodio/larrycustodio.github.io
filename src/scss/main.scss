@@ -1,8 +1,4 @@
-@mixin media-screen($width) {
-    @media screen and (min-width:$width) {
-        @content;
-    }
-}
+@import 'mixins/mixins';
 
 @import 'partials/base';
 @import 'partials/footer';
