@@ -1,3 +1,20 @@
+@keyframes blinkInOut {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.header-title--prefix {
+    color: rgb(187, 166, 166);
+    font-size: 65%;
+    margin-right: 8px;
+    position: relative;
+    top: -0.20em;
+}
+
 .section-top__header-title {
     font-size: 2.25em;
     font-weight: 800;
@@ -8,6 +25,13 @@
     @include media-screen(1280px) {
         font-size: 4em;
     }
+}
+
+.header-title--cursor {
+    animation: blinkInOut 850ms steps(2,end) infinite;
+    content: '';
+    border-right: 8px solid rgb(101, 84, 84);
+    margin-left: 8px;
 }
 
 .section-top__header-sub {
