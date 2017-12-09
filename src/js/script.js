@@ -20,7 +20,7 @@ const contactTogglers = [indexContactFormToggler, navBarContactFormToggler, foot
 const contactFormClose = document.querySelector('#contactFormClose');
 
 for(let contactToggler of contactTogglers){
-    contactToggler.addEventListener('click', onContactFormShowHandler);
+    !! contactToggler ? contactToggler.addEventListener('click', onContactFormShowHandler) : null;
 }
 
 contactFormClose.addEventListener('click', onContactFormCloseHandler);

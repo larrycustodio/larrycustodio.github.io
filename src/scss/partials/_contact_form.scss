@@ -19,7 +19,7 @@
 .container__contact-form {
     display: none;
     background-color: rgba(189, 189, 189, 0.43);
-    grid-template-columns: 1fr 90% 1fr;
+    grid-template-columns: 1fr 90vw 1fr;
     grid-template-rows: .5fr 55vh 1fr; 
     grid-template-areas:
     ". . ."
@@ -31,6 +31,9 @@
     top: 0;
     width: 100%;
     z-index: 2;
+    @include media-screen(1024px){
+        grid-template-columns: 1fr 50vw 1fr;        
+    }
 }
 .contact-form--show {
     display: grid;

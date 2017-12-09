@@ -21,6 +21,7 @@
 }
 .menu__link {
     color: rgb(128, 140, 153);
+    cursor: pointer;
     padding: 0 0.5em;
     text-decoration: none;
     &.link-active {
