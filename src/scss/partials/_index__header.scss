@@ -1,37 +1,58 @@
 .section-top__header-title {
-     font-size: 2.25em;
-     font-weight: 800;
-     margin: 0.5em 0;
-     @include media-screen(768px){
+    font-size: 2.25em;
+    font-weight: 800;
+    margin: 0.5em 0;
+    @include media-screen(768px) {
         font-size: 2.75em;
-     }
-     @include media-screen(1280px){
+    }
+    @include media-screen(1280px) {
         font-size: 4em;
-     }
- }
- .section-top__header-sub {
+    }
+}
+
+.section-top__header-sub {
     font-size: 1.25em;
     line-height: 1.75em;
-    @include media-screen(768px){
+    @include media-screen(768px) {
         font-size: 1.75em;
-        line-height: 1.45em;        
-     }
-     @include media-screen(1280px){
+        line-height: 1.45em;
+    }
+    @include media-screen(1280px) {
         font-size: 1.35em;
-     }
- }
+    }
+}
+
 .section-top__header-links {
     margin-top: 1em;
 }
 
-.link__icon svg {
-     fill: rgb(101, 84, 84);
- }
- .icon__svg-path {
-     width: 45px;
-     height: 45px;
-     @include media-screen(768px){
-         width: 65px;
-         height: 65px;
-     }
+$svg-colors: rgb(36, 41, 46),
+rgb(0, 150, 136),
+rgb(0, 119, 181),
+rgb(255, 142, 99);
+
+.link__icon {
+    svg {
+        fill: rgb(101, 84, 84);
+        transition: all 0.40s ease;
+    }
+    &:hover {
+        @for $i from 1 through 4 {
+            &:nth-of-type(#{$i}) {
+                svg {
+                    fill: nth($svg-colors,$i);
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}
+
+.icon__svg-path {
+    width: 45px;
+    height: 45px;
+    @include media-screen(768px) {
+        width: 65px;
+        height: 65px;
+    }
 }
