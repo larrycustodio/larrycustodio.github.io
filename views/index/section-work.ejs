@@ -6,15 +6,19 @@
         <div class='work-samples'>
             <% workHighlights.forEach(info => { %>
                 <div class='work-sample'>
+                    <div class='sample__gradient'></div>
                     <figure class='sample__figure'>
-                        <img class='sample__img' src='assets/img/work__screenshot-0.png' alt='image-screenshot'>
-                        <div class='sample__gradient'></div>
+                        <img class='sample__img' src='<%= info.imgsource %>' alt='image-screenshot'>
                         <figcaption class='sample__body'>
                             <div class='work-sample__title'><%= info.title %></div>
                             <div class='work-sample__link'>
-                                <a class='card__action-link' href='<%= info.link %>' target='_blank'>
-                                <%= info.linkTag %>
-                                </a>
+                                <a href='<%= info.link %>' target='_blank'>Link</a>                                
+                            </div>
+                            <div class='work-sample__link'>
+                                <a class='work-sample__code-link' href='<%= info.githubLink %>'>Code</a>
+                            </div>
+                            <div class='work-sample__description'>
+                                <p><%= info.description %></p>
                             </div>
                         </figcaption>
                     </figure>

@@ -30,7 +30,7 @@
     left: 0;
     top: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 99;
     @include media-screen(1024px){
         grid-template-columns: 1fr 50vw 1fr;        
     }
@@ -51,7 +51,7 @@
     text-align: right;
 }
 .contact-info{
-    align-self: center;
+    align-self: center; 
     padding: 0.5em 1em;
 }
 .contact-form__link {

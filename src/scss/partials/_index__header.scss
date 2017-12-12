@@ -29,7 +29,6 @@
 
 .header-title--cursor {
     animation: blinkInOut 850ms steps(2,end) infinite;
-    content: '';
     border-right: 8px solid rgb(101, 84, 84);
     margin-left: 8px;
 }

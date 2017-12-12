@@ -1,6 +1,9 @@
 /* * * * * * * * *
  * Main Components
  * * * * * * * * */
+ * {
+     box-sizing: border-box;
+ }
  body {
      color: rgb(101, 84, 84);     
      font-family: 'Raleway', 'Helvetica Neue', sans-serif;
