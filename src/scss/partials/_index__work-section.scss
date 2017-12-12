@@ -33,13 +33,17 @@
     position: relative;
     &:hover,
     &:focus {
-        outline: none;
         & .sample__figure .sample__body {
             background-color: rgba(249, 249, 249, 0.9);
             color: #474747;
             height: 100%;
             .work-sample__link {
-                background-color: rgb(65, 166, 199);
+                &:nth-of-type(1) {
+                    background-color:rgb(6, 208, 176)
+                }
+                &:nth-of-type(2) {
+                    background-color: rgb(32, 175, 221);
+                }
             }
             .work-sample__description {
                 opacity: 1;
@@ -112,15 +116,15 @@
             margin: 0.125em 0;
             text-transform: uppercase;
             grid-area: wtitle;
-            @include media-screen(1280px){
-                font-size: 1.65em;
-            }   
+            @include media-screen(1280px) {
+                font-size: 1.75em;
+            }
         }
         .work-sample__links {
             display: inline-block;
             margin-left: 1em;
             transform: translateY(-10%);
-            @include media-screen(1024px){
+            @include media-screen(1024px) {
                 display: block;
                 margin: 0.25em 0 0 0;
                 transform: translateY(0);
@@ -135,11 +139,11 @@
             text-transform: uppercase;
             transition: background-color 650ms ease-out;
             a {
-                color: rgb(249,249,249);
+                color: rgb(249, 249, 249);
             }
         }
         .work-sample__description {
-            font-size: 0.78em;
+            font-size: 0.80em;
             line-height: 1.75em;
             opacity: 0;
             text-align: justify;
@@ -147,11 +151,8 @@
                 margin-top: 1em;
             }
             @include media-screen(1024px) {
-                font-size: 0.85em;
+                font-size: 1.15em;
                 opacity: 1;
-            }
-            @include media-screen(1280px) {
-                font-size: 1.00em;
             }
         }
     }
