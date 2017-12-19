@@ -12,7 +12,6 @@ pids
 *.pid.lock
 
 # Server config
-server/index.js
 
 # Bower dependency directory (https://bower.io/)
 bower_components
