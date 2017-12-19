@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const footerContactFormToggler = document.querySelector('#footerContactFormToggler');
     const contactTogglers = [indexContactFormToggler, navBarContactFormToggler, footerContactFormToggler];
 
-    const contactForm = document.querySelector('#contactForm');
+    // const contactForm = document.querySelector('#contactForm');
     const contactFormClose = document.querySelector('#contactFormClose');
 
     //Event Listeners
