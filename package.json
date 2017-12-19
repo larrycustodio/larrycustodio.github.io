@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "gulp",
+    "dist": "gulp dist",
     "start": "node server",
     "deploy": "pm2 start server --name larrycustod.io --watch",
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -56,6 +56,7 @@ gulp.task('browser-sync', () => {
         proxy: 'localhost:8080/'
     })
 });
+gulp.task('dist', ['sass','css','js']);
 gulp.task('default', ['sass', 'css', 'watch', 'serve','browser-sync']);
 
 module.exports = gulp;
