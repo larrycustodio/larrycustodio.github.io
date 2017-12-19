@@ -56,8 +56,6 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req,res) => {
     res.render('about', Object.assign(data, {page_name:'about'}));
-
-    res.render('about', {...data, page_name:'about'});
 });
 
 app.get('/blog', (req,res)=>{
