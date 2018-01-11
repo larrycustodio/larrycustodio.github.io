@@ -12,9 +12,11 @@
                         <figcaption class='sample__body'>
                             <div class='work-sample__title'><%= info.title %></div>
                             <div class='work-sample__links'>
-                                <div class='work-sample__link'>
-                                    <a href='<%= info.link %>' target='_blank'>Demo</a>                                
-                                </div>
+                                <% if(info.link!==undefined){ %>
+                                    <div class='work-sample__link'>
+                                        <a href='<%= info.link %>' target='_blank'>Demo</a>                                
+                                    </div>
+                                <% } %>
                                 <div class='work-sample__link'>
                                     <a href='<%= info.githubLink %>'>Code</a>
                                 </div>
