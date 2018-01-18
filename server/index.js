@@ -14,14 +14,13 @@ app.set('views', './views');
 app.set('view engine', 'ejs');
 
 const work = require('./work-data');
-const {data} = work;
 
 app.get('/', (req, res) => {
-    res.render('index', Object.assign(data, {page_name:''}));
+    res.render('index', Object.assign(work.data, {page_name:''}));
 });
 
 app.get('/about', (req,res) => {
-    res.render('about', Object.assign(data, {page_name:'about'}));
+    res.render('about', Object.assign(work.data, {page_name:'about'}));
 });
 
 app.get('/blog', (req,res)=>{
