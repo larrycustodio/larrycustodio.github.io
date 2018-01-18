@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
         contactFormContainer.classList.add('contact-form--hide');
         setTimeout(() => { contactFormContainer.classList.remove('contact-form--show') }, 950);
     }
+    
     const headerTitleTextHandler = () => {
         if (headerTitleCurrText.length < headerTitleText.length) {
             headerTitleCurrIndex++;
@@ -36,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function () {
         !!contactToggler ? contactToggler.addEventListener('click', onContactFormShowHandler) : null;
     }
     contactFormClose.addEventListener('click', onContactFormCloseHandler);
-    contactForm.addEventListener('submit', onContactFormSubmitHandler);
 
     //DOM Modifiers
     headerTitle.innerText = "";
