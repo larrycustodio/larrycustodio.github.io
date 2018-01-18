@@ -17,9 +17,11 @@
                                         <a href='<%= info.link %>' target='_blank'>Demo</a>                                
                                     </div>
                                 <% } %>
-                                <div class='work-sample__link'>
-                                    <a href='<%= info.githubLink %>'>Code</a>
-                                </div>
+                                <% if(info.github!==undefined){ %>
+                                    <div class='work-sample__link'>
+                                        <a href='<%= info.github %>' target='_blank'>Code</a>                                
+                                    </div>
+                                <% } %>
                             </div>
                             <div class='work-sample__description'>
                                 <p><%= info.description %></p>

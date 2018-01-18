@@ -9,27 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
         contactFormContainer.classList.add('contact-form--hide');
         setTimeout(() => { contactFormContainer.classList.remove('contact-form--show') }, 950);
     }
-    const onContactFormSubmitHandler = event => {
-        event.preventDefault();
-
-        const formName = document.querySelector('#firstName');
-        const formEmail = document.querySelector('#email');
-        const formMessage = document.querySelector('#message');
-
-        axios.post('/contact', {name: formName.value, email: formEmail.value, message: formMessage.value})
-        .then(res => {
-            const formHeader = document.querySelector('.contact-info')[0].children[0];            
-            const formHeaderText = document.querySelector('#formHeaderText');
-            const formGroups = document.querySelectorAll('.form-group');
-            formHeader.textContent = 'Appreciate it!'
-            formHeaderText.textContent = `Thanks for your interest, ${formName.value}!` + 
-            'I will get back to you as soon as possible';
-        })
-        .catch(err => {
-            console.log('error occured :(');
-        });
-
-    }
     const headerTitleTextHandler = () => {
         if (headerTitleCurrText.length < headerTitleText.length) {
             headerTitleCurrIndex++;

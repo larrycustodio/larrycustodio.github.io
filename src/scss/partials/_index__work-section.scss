@@ -30,13 +30,24 @@
 
 //Single card container
 .work-sample {
+    max-width: 90%;
     position: relative;
+    margin-bottom: 0.5em;
     &:hover,
     &:focus {
         & .sample__figure .sample__body {
             background-color: rgba(249, 249, 249, 0.9);
             color: #474747;
             height: 100%;
+            .work-sample__links {
+                display: block;
+                margin: 0.5em 0 0 0;
+                @include media-screen(768px) {
+                    display: inline-block;
+                    margin: 0 0 0 1.25em;
+                    transform: translateY(-2px);
+                }
+            }            
             .work-sample__link {
                 &:nth-of-type(1) {
                     background-color:rgb(6, 208, 176)
@@ -121,21 +132,14 @@
             }
         }
         .work-sample__links {
-            display: inline-block;
-            margin-left: 1em;
-            transform: translateY(-10%);
-            @include media-screen(1024px) {
-                display: block;
-                margin: 0.25em 0 0 0;
-                transform: translateY(0);
-            }
+            display: none;
         }
         .work-sample__link {
             background-color: rgba(131, 141, 144, 0.70);
             border-radius: 4px;
             display: inline-block;
             margin-right: 0.75em;
-            padding: 0.25em 0.75em;
+            padding: 0.35em 0.75em;
             text-transform: uppercase;
             transition: background-color 650ms ease-out;
             a {
@@ -143,12 +147,16 @@
             }
         }
         .work-sample__description {
+            display: none;
             font-size: 0.95em;
             line-height: 1.75em;
             opacity: 0;
             text-align: justify;
             p {
                 margin-top: 1em;
+            }
+            @include media-screen(768px){
+                display: block;
             }
             @include media-screen(1024px) {
                 font-size: 1.15em;
