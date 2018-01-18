@@ -45,7 +45,6 @@
                 @include media-screen(768px) {
                     display: inline-block;
                     margin: 0 0 0 1.25em;
-                    transform: translateY(-2px);
                 }
             }            
             .work-sample__link {
@@ -133,6 +132,11 @@
         }
         .work-sample__links {
             display: none;
+            @include media-screen(768px) {
+                display: inline-block;
+                margin: 0 0 0 1.25em;
+                transform: translateY(-2px);
+            }
         }
         .work-sample__link {
             background-color: rgba(131, 141, 144, 0.70);
