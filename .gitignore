@@ -17,7 +17,7 @@ pids
 bower_components
 
 # Distribution folder
-
+dist/
 node_modules/
 jspm_packages/
 
