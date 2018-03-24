@@ -1,3 +1,6 @@
+// Import CSS
+import style from '../css/main.css';
+
 document.addEventListener('DOMContentLoaded', function () {
     //Event Handlers
     const onContactFormShowHandler = event => {

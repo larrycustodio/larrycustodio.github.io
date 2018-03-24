@@ -27,7 +27,6 @@ app.get('/blog', (req,res)=>{
     res.redirect('http://bitly.com/98K8eH');
 });
 
-
 app.listen(process.env.PORT, () => {
     console.log(`Listening on http://127.0.0.1:${process.env.PORT}/!`);
 });
