@@ -19,9 +19,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader'
-                }
+                loader: 'babel-loader'
             },
             {
                 test: /\.html$/,
@@ -35,17 +33,34 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader']
-            }
+                use: [
+                    { loader: MiniCssExtractPlugin.loader }, 
+                    {
+                        loader: 'css-loader',
+                        options: { minimize: true }
+                    }
+                ]
+            },
+            {
+                test: /\.woff2?$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 50000,
+                    mimetype: 'application/font-woff',
+                    name: './fonts/[name].[ext]',
+                }
+            },
         ]
     },
 
     plugins: [htmlWebpackPluginConfig, cssWebpackPluginConfig],
 
+    cache: false,
+
     output: {
         path: path.resolve(__dirname, 'dist'),
         publicPath: '/',
-        filename: 'bundle.js'
+        filename: '[name].[chunkhash].js'
     },
 
     devServer: {

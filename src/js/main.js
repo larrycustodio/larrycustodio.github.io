@@ -1,4 +1,5 @@
 // Import CSS
+import 'normalize.css';
 import style from '../css/main.css';
 
 document.addEventListener('DOMContentLoaded', function () {

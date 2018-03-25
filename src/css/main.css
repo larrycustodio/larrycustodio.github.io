@@ -1,4 +1,102 @@
+/* Fonts, Variables */
+:root {
+    --dark-blue: rgb(46, 106, 153);
+    --light-blue: rgb(172, 205, 232);
+    --text-emphasis-color: rgb(36,93,134);
+    --text-main-color: rgb(101,146,200);
+    --green: rgb(69, 187, 162);
+    --spacer: 1.75rem;
+    --spacer-medium: 2.25rem;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Awesome Font'),
+         url('/fonts/sofia_pro_regular-webfont.woff2') format('woff2'), 
+         url('/fonts/sofia_pro_regular-webfont.woff') format('woff'),
+}
+
+/* Site components */
+a,
+a:hover,
+a:focus,
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+button,
+button:active,
+button:focus {
+    border: none;
+    outline: none;
+    padding: 0;
+}
+/* Section + Site Containers */
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1rem;
+    font-family: 'Sofia Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.0rem;
+    min-height: 100%;
+    width: 100%;
+}
+
+.site-container {
+    max-height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.nav {
+    color: var(--light-blue);
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 1.85rem;
+    font-weight: 500;
+    justify-content: space-between;
+    padding: var(--spacer) var(--spacer-medium);
+    text-transform: uppercase;
+}
+
+.nav__links>.link__item {
+    transition: color 250ms ease;
+}
+
+.nav__links>.link__item.link--active {
+    color: var(--dark-blue);
+}
+
+.nav__links>.link__item:not(:last-of-type){
+    margin-right: 2.9375rem; 
+}
+.nav__links>.link__item:hover,
+.nav__links>.link__item:focus {
+    color: var(--dark-blue);
+}
+
+.logo--dark {
+    color: var(--dark-blue);
+}
+
+.section__home.section--container {
+    display: flex;
+    padding: var(--spacer) var(--spacer-medium);
+
+}
+
+.content__hook {
+    color: var(--text-emphasis-color);
+    font-size: 4.25rem;
+}
+
+.content__hook .hook__button {
+    font-size: 1.875rem;
+    text-transform: uppercase;
 }
