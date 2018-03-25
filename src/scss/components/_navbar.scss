@@ -1,0 +1,59 @@
+/* Navbar + Child Components (Links + Logo) */
+
+.nav {
+    color: $light-blue;
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 1.35rem;
+    font-weight: 500;
+    justify-content: center;
+    padding: $spacer $spacer-large;
+    text-transform: uppercase;
+    @media (min-width: 768px) {
+        font-size: 1.45rem;
+        justify-content: space-between;
+    }
+    @media (min-width: 1024px) {
+        font-size: 1.85rem;
+        padding: $spacer-large $spacer-xlarge;
+    }
+}
+
+.nav__logo {
+    margin-bottom: $spacer-xsmall;
+    @media (min-width: 768px) {
+        margin: 0;
+    }
+}
+
+.logo--dark {
+    color: $dark-blue;
+}
+
+
+/* Navbar links */
+
+.nav__links {
+    font-size: 0.95rem;
+    text-align: center;
+    @media (min-width: 600px) {
+        font-size: inherit;
+    }
+}
+
+.nav__links>.link__item {
+    margin: 8px;
+    transition: color 250ms ease;
+    &:active {
+        color: $dark-blue;
+    }
+    &:hover,
+    &:focus {
+        color: $dark-blue;
+    }
+    @media (min-width: 768px) {
+        &:not(:last-of-type) {
+            margin-right: $spacer-small;
+        }
+    }
+}

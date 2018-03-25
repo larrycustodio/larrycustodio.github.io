@@ -1,0 +1,44 @@
+/* Top Section / Hero Container + Components */
+.section__home .section__content {
+    display: flex;
+    color: $text-main-color;
+    flex-flow: row-wrap;
+    justify-content: space-around;
+    padding: $spacer $spacer-large;
+}
+
+/* Left container */
+.content__caption:first-of-type {
+    color: $text-emphasis-color;
+    flex: 1.5 0;
+    font-size: 3.875rem;
+}
+
+.content__caption>.caption__text {
+    margin-bottom: $spacer-small;
+}
+
+.content__caption>.caption__button {
+    color: $text-main-color;
+    cursor: pointer;
+    display: block;
+    font-size: 1.35rem;
+    padding: 1.05rem;
+    text-transform: uppercase;
+    transition: all 250ms ease;
+}
+
+.content__caption>.caption__button:hover {
+    background-color: rgba(133, 175, 226, 0.1);
+    border-radius: 12px;
+}
+
+/* Right container + components */
+.content__caption:last-of-type {
+    display: flex;
+    align-items: center;
+    font-size: 1.75rem;
+    flex: 1 0;
+    font-weight: 200;
+    text-align: right;
+}

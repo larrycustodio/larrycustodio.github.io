@@ -1,12 +1,34 @@
-@import 'mixins/mixins';
+@import "variables";
+@import "typography";
 
-@import 'partials/navbar';
-@import 'partials/base';
-@import 'partials/footer';
-@import 'partials/contact_form';
+@font-face {
+    font-family: 'Sofia Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Awesome Font'), url('/fonts/sofia_pro_regular-webfont.woff2') format('woff2'), url('/fonts/sofia_pro_regular-webfont.woff') format('woff'),
+}
 
-@import 'partials/index__header';
-@import 'partials/index__work-section';
-@import 'partials/index__contact-section';
+a,
+a:hover,
+a:focus,
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
 
-@import 'partials/about__section';
+a:focus {
+    outline: none;
+}
+
+button,
+button:active,
+button:focus {
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+/* Site components */
+@import "components/main";
+@import "components/navbar";
+@import "components/hero";

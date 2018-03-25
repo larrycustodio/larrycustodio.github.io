@@ -1,6 +1,6 @@
 // Import CSS
 import 'normalize.css';
-import style from '../css/main.css';
+import style from '../scss/main.scss';
 
 document.addEventListener('DOMContentLoaded', function () {
     //Event Handlers
