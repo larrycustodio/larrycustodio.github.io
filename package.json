@@ -4,9 +4,9 @@
   "description": "My personal portfolio",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production",
-    "start": "npm run build && node server",
+    "dev:watch": "gulp watch",
+    "dev:nodemon": "nodemon server",
+    "start": "gulp && node server",
     "deploy": "pm2 start server --name larrycustod.io --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

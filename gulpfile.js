@@ -48,11 +48,15 @@ gulp.task('build-js', () =>
         .pipe(plumber.stop())
         .pipe(gulp.dest('dist'))
 );
+gulp.task('fonts', function () {
+    return gulp.src('src/fonts/**/*')
+        .pipe(gulp.dest('dist/fonts'))
+})
 
-gulp.task('default', ['build-html', 'compile-sass', 'build-css', 'build-js']);
+gulp.task('default', ['build-html', 'fonts', 'compile-sass', 'build-css', 'build-js']);
 
-gulp.task('watch', ()=>{
+gulp.task('watch', () => {
     gulp.watch('src/**/*.html', ['build-html']),
-    gulp.watch('src/scss/**/*.scss', ['compile-sass', 'build-css']),
-    gulp.watch('src/js/**/*.js', ['build-js'])
+        gulp.watch('src/scss/**/*.scss', ['compile-sass', 'build-css']),
+        gulp.watch('src/js/**/*.js', ['build-js'])
 });

@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv').config();
 const app = express();
+const path = require('path');
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
@@ -10,13 +11,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(express.static('dist'));
 
-app.set('views', './views');
-app.set('view engine', 'ejs');
-
-const work = require('./work-data');
+const indexFile = path.join(__dirname,'../dist/index.html');
 
 app.get('/', (req, res) => {
-    res.render('index', Object.assign(work.data, {page_name:''}));
+    res.sendFile(indexFile);
 });
 
 app.get('/about', (req,res) => {
@@ -28,5 +26,5 @@ app.get('/blog', (req,res)=>{
 });
 
 app.listen(process.env.PORT, () => {
-    console.log(`Listening on http://127.0.0.1:${process.env.PORT}/!`);
+    console.log(`Listening on http://127.0.0.1:${process.env.PORT}`);
 });
