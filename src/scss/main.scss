@@ -23,6 +23,7 @@ a:focus {
 button,
 button:active,
 button:focus {
+    font-family: inherit;
     border: none;
     outline: none;
     padding: 0;
@@ -32,3 +33,4 @@ button:focus {
 @import "components/main";
 @import "components/navbar";
 @import "components/hero";
+@import "components/work-section";

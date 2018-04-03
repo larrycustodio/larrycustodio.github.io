@@ -8,6 +8,7 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
+const browserSync = require('browser-sync').create();
 
 gulp.task('build-html', () =>
     gulp.src('src/*.html')
@@ -15,7 +16,7 @@ gulp.task('build-html', () =>
         .pipe(gulp.dest('dist'))
 );
 
-gulp.task('compile-sass', () =>
+gulp.task('build-sass', () =>
     gulp.src('src/scss/main.scss')
         .pipe(plumber())
         .pipe(sass())
@@ -23,7 +24,7 @@ gulp.task('compile-sass', () =>
         .pipe(gulp.dest('src/css'))
 );
 
-gulp.task('build-css', () =>
+gulp.task('build-css', ['build-sass'], () =>
     gulp.src('src/css/main.css')
         .pipe(plumber())
         .pipe(sourcemaps.init())
@@ -53,10 +54,30 @@ gulp.task('fonts', function () {
         .pipe(gulp.dest('dist/fonts'))
 })
 
-gulp.task('default', ['build-html', 'fonts', 'compile-sass', 'build-css', 'build-js']);
+gulp.task('html-watch', ['build-html'], done => {
+    browserSync.reload();
+    done();
+});
+
+gulp.task('css-watch', ['build-css'], done => {
+    browserSync.reload();
+    done();
+});
+
+gulp.task('js-watch', ['build-js'], done => {
+    browserSync.reload();
+    done();
+});
 
 gulp.task('watch', () => {
-    gulp.watch('src/**/*.html', ['build-html']),
-        gulp.watch('src/scss/**/*.scss', ['compile-sass', 'build-css']),
-        gulp.watch('src/js/**/*.js', ['build-js'])
+    browserSync.init({
+        proxy: "127.0.0.1:8081"
+    });
+
+    gulp.watch('src/**/*.html', ['html-watch']);
+    gulp.watch('src/scss/**/*.scss', ['css-watch']),
+    gulp.watch('src/js/**/*.js', ['js-watch'])
 });
+
+
+gulp.task('default', ['build-html', 'fonts', 'build-sass', 'build-css', 'build-js']);

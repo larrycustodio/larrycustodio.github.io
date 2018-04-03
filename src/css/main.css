@@ -23,6 +23,7 @@ a:focus {
 button,
 button:active,
 button:focus {
+  font-family: inherit;
   border: none;
   outline: none;
   padding: 0; }
@@ -39,7 +40,7 @@ body {
   max-height: 100%;
   max-width: 100%;
   overflow-x: hidden;
-  overflow-y: hidden; }
+  overflow-y: scroll; }
 
 /* Navbar + Child Components (Links + Logo) */
 .nav {
@@ -116,14 +117,18 @@ body {
     .content__caption:first-of-type .caption__text {
       display: none; }
     .content__caption:first-of-type .caption__button {
-      background-color: transparent;
+      background-color: rgba(133, 175, 226, 0.15);
+      border-radius: 5px;
       color: #6592c8;
       cursor: pointer;
       display: block;
       font-size: 1.25rem;
+      margin: 1rem auto;
+      padding: 0.85rem 2.25rem;
       text-transform: uppercase;
-      margin-left: auto;
       transition: all 250ms ease; }
+      .content__caption:first-of-type .caption__button:hover {
+        background-color: rgba(133, 175, 226, 0.2); }
     @media (min-width: 768px) {
       .content__caption:first-of-type {
         display: flex;
@@ -148,7 +153,7 @@ body {
     flex: 1 0;
     font-weight: 200;
     grid-area: 2/2/3/3;
-    text-align: right; }
+    text-align: center; }
     @media (min-width: 768px) {
       .content__caption:last-of-type {
         display: none;
@@ -158,8 +163,56 @@ body {
         align-items: center;
         display: flex;
         font-size: 1.45rem;
-        line-height: 2.65rem; } }
+        line-height: 2.65rem;
+        text-align: right; } }
 
-.content__caption > .caption__button:hover {
-  background-color: rgba(133, 175, 226, 0.1);
-  border-radius: 12px; }
+.section__projects .section__content {
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: 500; }
+
+.project__container {
+  color: #6592c8;
+  flex: 1 0 50%;
+  text-align: center;
+  padding: 4.5vh 3vw; }
+
+.project__title {
+  color: #6592c8;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase; }
+
+.project__subtitle {
+  color: #45bba2;
+  font-size: 1.35rem;
+  margin-top: 0;
+  line-height: 1.85rem; }
+
+.project__media {
+  max-width: 85vw;
+  margin: 0 auto; }
+  .project__media .media__img {
+    max-width: 100%; }
+
+.project__textarea {
+  text-align: left;
+  line-height: 1.85rem; }
+
+.tech__heading {
+  color: #6592c8;
+  font-weight: 800;
+  font-size: 1.35rem;
+  padding-bottom: 0.75rem;
+  text-transform: uppercase; }
+
+.tech__list {
+  color: #accde8;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.5rem; }
+
+.list__item {
+  display: inline-block;
+  margin: 0 1.0rem 0.5rem; }
