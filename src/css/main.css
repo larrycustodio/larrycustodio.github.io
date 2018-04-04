@@ -117,12 +117,12 @@ body {
     .content__caption:first-of-type .caption__text {
       display: none; }
     .content__caption:first-of-type .caption__button {
-      background-color: rgba(133, 175, 226, 0.15);
+      background-color: rgba(133, 175, 226, 0.1);
       border-radius: 5px;
       color: #6592c8;
       cursor: pointer;
       display: block;
-      font-size: 1.25rem;
+      font-size: 1rem;
       margin: 1rem auto;
       padding: 0.85rem 2.25rem;
       text-transform: uppercase;
@@ -175,7 +175,7 @@ body {
   color: #6592c8;
   flex: 1 0 50%;
   margin: 0.75rem;
-  padding: 4.5vh 7.5vw;
+  padding: 2.5vh 7.5vw;
   position: relative;
   text-align: center; }
   .project__container .border {
@@ -199,33 +199,61 @@ body {
       height: 99.97%;
       top: 50%;
       transform: translateY(-50%); }
+  @media (min-width: 1024px) {
+    .project__container {
+      display: flex;
+      flex-flow: row wrap;
+      padding: 6.5vh 7.5vw; } }
 
-.project__title {
-  color: #6592c8;
-  font-size: 1.1rem;
-  margin-bottom: 0.25rem;
-  text-transform: uppercase; }
-
-.project__subtitle {
-  color: #45bba2;
-  font-size: 1.35rem;
-  margin-top: 0;
-  line-height: 1.85rem; }
+.project__heading {
+  margin-bottom: 1.25rem; }
+  .project__heading .title {
+    color: #6592c8;
+    font-size: 1.1rem;
+    margin: 0 0 0.75rem;
+    text-transform: uppercase; }
+  .project__heading .subtitle {
+    color: #45bba2;
+    font-size: 1.35rem;
+    margin: 0 0 0.75rem;
+    line-height: 1.85rem; }
+  @media (min-width: 1024px) {
+    .project__heading {
+      flex-basis: 100%;
+      text-align: left; } }
 
 .project__media {
   max-width: 85vw;
-  margin: 0 auto; }
+  margin: 0 auto 1rem; }
   .project__media .media__img {
     max-width: 100%; }
+  @media (min-width: 1024px) {
+    .project__media {
+      flex-basis: 40%;
+      order: 2; } }
+
+@media (min-width: 1024px) {
+  .project__description {
+    align-items: center;
+    display: flex;
+    flex-basis: 56%;
+    flex-flow: row wrap;
+    justify-content: center;
+    order: 1; } }
 
 .project__textarea {
   text-align: left;
-  line-height: 1.85rem; }
+  line-height: 1.85rem;
+  margin-top: 0; }
+  @media (min-width: 1024px) {
+    .project__textarea {
+      font-size: 1.25rem;
+      line-height: 2rem; } }
 
 .tech__heading {
   color: #6592c8;
   font-weight: 800;
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   padding-bottom: 0.75rem;
   text-transform: uppercase; }
 

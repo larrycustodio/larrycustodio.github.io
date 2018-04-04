@@ -1,5 +1,5 @@
 // Projects section
-.section__projects .section__content{
+.section__projects .section__content {
     display: flex;
     flex-flow: row wrap;
     font-weight: 500;
@@ -10,14 +10,13 @@
     color: $text-main-color;
     flex: 1 0 50%;
     margin: 0.75rem;
-    padding: 4.5vh 7.5vw;
+    padding: 2.5vh 7.5vw;
     position: relative;
-    text-align: center;
-    // Container modifiers - dynamic borders
+    text-align: center; // Container modifiers - dynamic borders
     .border {
         position: absolute;
         background-color: $light-blue;
-        &.border__top{
+        &.border__top {
             top: 0%;
         }
         &.border__bottom {
@@ -29,55 +28,85 @@
         &.border__right {
             right: 1%;
         }
-        &.border--x{
+        &.border--x {
             width: 98%;
             height: 2px;
             left: 50%;
             transform: translateX(-50%);
         }
-        &.border--y{
+        &.border--y {
             width: 2px;
             height: 99.97%;
             top: 50%;
             transform: translateY(-50%);
         }
     }
+    @media (min-width: 1024px) {
+        display: flex;
+        flex-flow: row wrap;
+        padding: 6.5vh 7.5vw;
+    }
 }
 
-.project__title {
-    color: $text-project-title;
-    font-size: 1.1rem;
-    margin-bottom: 0.25rem;
-    text-transform: uppercase;
-}
-
-.project__subtitle {
-    color: $text-project-subtitle;
-    font-size: 1.35rem;
-    margin-top: 0;
-    line-height: 1.85rem;
+.project__heading {
+    .title {
+        color: $text-project-title;
+        font-size: 1.1rem;
+        margin: 0 0 $spacer-xsmall;
+        text-transform: uppercase;
+    }
+    .subtitle {
+        color: $text-project-subtitle;
+        font-size: 1.35rem;
+        margin: 0 0 $spacer-xsmall;
+        line-height: 1.85rem;
+    }
+    margin-bottom: $spacer-small;
+    @media (min-width: 1024px) {
+        flex-basis: 100%;
+        text-align: left;
+    }
 }
 
 // Project media + description
 .project__media {
     max-width: 85vw;
-    margin: 0 auto;
+    margin: 0 auto 1rem;
     & .media__img {
         max-width: 100%;
+    }
+    @media (min-width: 1024px) {
+        flex-basis: 40%;
+        order: 2;
+    }
+}
+
+.project__description {
+    @media (min-width: 1024px) {
+        align-items: center;
+        display: flex;
+        flex-basis: 56%;
+        flex-flow: row wrap;
+        justify-content: center;
+        order: 1;
     }
 }
 
 .project__textarea {
     text-align: left;
     line-height: 1.85rem;
-
+    margin-top: 0;
+    @media (min-width: 1024px) {
+        font-size: 1.25rem;
+        line-height: 2rem;
+    }
 }
 
 // Technology Section
 .tech__heading {
     color: $text-main-color;
     font-weight: 800;
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     padding-bottom: $spacer-xsmall;
     text-transform: uppercase;
 }
@@ -92,5 +121,5 @@
 
 .list__item {
     display: inline-block;
-    margin: 0 1.0rem 0.5rem; 
+    margin: 0 1.0rem 0.5rem;
 }

@@ -6,7 +6,7 @@ class ProjectsContainer {
     addContainerBorders() {
         if (!!this.projects.length) {
             [...this.projects].forEach(project => {
-                [
+                [   
                     { position: 'top', coord: 'x' },
                     { position: 'bottom', coord: 'x' },
                     { position: 'left', coord: 'y' },
