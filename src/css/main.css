@@ -174,31 +174,35 @@ body {
 .project__container {
   color: #6592c8;
   flex: 1 0 50%;
+  filter: grayscale(0.9);
   margin: 0.75rem;
   padding: 2.5vh 7.5vw;
   position: relative;
-  text-align: center; }
-  .project__container .border {
+  text-align: center;
+  transition: all 500ms ease-in-out; }
+  .project__container > .border {
     position: absolute;
     background-color: #accde8; }
-    .project__container .border.border__top {
+    .project__container > .border.border__top {
       top: 0%; }
-    .project__container .border.border__bottom {
+    .project__container > .border.border__bottom {
       bottom: 0%; }
-    .project__container .border.border__left {
+    .project__container > .border.border__left {
       left: 1%; }
-    .project__container .border.border__right {
+    .project__container > .border.border__right {
       right: 1%; }
-    .project__container .border.border--x {
+    .project__container > .border.border--x {
       width: 98%;
       height: 2px;
       left: 50%;
       transform: translateX(-50%); }
-    .project__container .border.border--y {
+    .project__container > .border.border--y {
       width: 2px;
       height: 99.97%;
       top: 50%;
       transform: translateY(-50%); }
+  .project__container.container--active {
+    filter: grayscale(0); }
   @media (min-width: 1024px) {
     .project__container {
       display: flex;

@@ -9,11 +9,13 @@
 .project__container {
     color: $text-main-color;
     flex: 1 0 50%;
+    filter: grayscale(0.9); 
     margin: 0.75rem;
     padding: 2.5vh 7.5vw;
     position: relative;
     text-align: center; // Container modifiers - dynamic borders
-    .border {
+    transition: all 500ms ease-in-out;
+    &>.border {
         position: absolute;
         background-color: $light-blue;
         &.border__top {
@@ -40,6 +42,9 @@
             top: 50%;
             transform: translateY(-50%);
         }
+    }
+    &.container--active{
+        filter: grayscale(0);   
     }
     @media (min-width: 1024px) {
         display: flex;
