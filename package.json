@@ -47,6 +47,7 @@
     "express": "^4.16.2",
     "gulp-clean-css": "^3.9.3",
     "gulp-htmlmin": "^4.0.0",
-    "normalize.css": "^8.0.0"
+    "normalize.css": "^8.0.0",
+    "siema": "^1.5.1"
   }
 }

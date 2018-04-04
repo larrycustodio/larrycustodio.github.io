@@ -25,7 +25,7 @@ class HeroContainer {
             yout = getY(xo);
             window.scrollTo(0, yout);
         }
-        const scrollInterval = setInterval(scrollDown, 1);
+        const scrollInterval = setInterval(scrollDown, 2);
     }
 
     scrollHandler(){

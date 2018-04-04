@@ -237,16 +237,6 @@ body {
       flex-basis: 100%;
       text-align: left; } }
 
-.project__media {
-  max-width: 85vw;
-  margin: 0 auto 1rem; }
-  .project__media .media__img {
-    max-width: 100%; }
-  @media (min-width: 1024px) {
-    .project__media {
-      flex-basis: 40%;
-      order: 2; } }
-
 @media (min-width: 1024px) {
   .project__description {
     align-items: center;
@@ -282,3 +272,20 @@ body {
 .list__item {
   display: inline-block;
   margin: 0 1.0rem 0.5rem; }
+
+.project__media {
+  background: linear-gradient(to bottom, #95ddea, #d6fbf3);
+  height: 30vh;
+  margin: 0 auto 1rem;
+  overflow: hidden;
+  width: 79.9vw; }
+  .project__media .media__img {
+    width: auto;
+    height: 100%; }
+  @media (min-width: 768px) {
+    .project__media {
+      height: 100; } }
+  @media (min-width: 1024px) {
+    .project__media {
+      flex-basis: 40%;
+      order: 2; } }

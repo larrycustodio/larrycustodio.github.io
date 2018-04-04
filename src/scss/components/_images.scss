@@ -1,0 +1,19 @@
+// Project media + description
+.project__media {
+    background: $image-container-bg;
+    height: 30vh;
+    margin: 0 auto 1rem;
+    overflow: hidden;
+    width: 79.9vw;
+    & .media__img {
+        width: auto;
+        height: 100%;
+    }
+    @media (min-width: 768px){
+        height: 100
+    }
+    @media (min-width: 1024px) {
+        flex-basis: 40%;
+        order: 2;
+    }
+}

@@ -90,19 +90,6 @@
     }
 }
 
-// Project media + description
-.project__media {
-    max-width: 85vw;
-    margin: 0 auto 1rem;
-    & .media__img {
-        max-width: 100%;
-    }
-    @media (min-width: 1024px) {
-        flex-basis: 40%;
-        order: 2;
-    }
-}
-
 .project__description {
     @media (min-width: 1024px) {
         align-items: center;

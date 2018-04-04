@@ -38,9 +38,7 @@ gulp.task('build-js', () =>
     gulp.src('src/js/**/*.js')
         .pipe(plumber())
         .pipe(sourcemaps.init())
-        .pipe(babel({
-            presets: ['env']
-        }))
+        .pipe(babel())
         .pipe(concat('app.concat.js'))
         .pipe(gulp.dest('dist'))
         .pipe(rename('app.concat.min.js'))
