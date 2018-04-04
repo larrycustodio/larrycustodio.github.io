@@ -68,6 +68,11 @@
         flex-flow: row wrap;
         padding: 6.5vh 7.5vw;
     }
+    @media (min-width: 1280px){
+        padding: 6.5vh 4.5vw;
+        max-width: 66vw;
+        margin: 0 auto 3.5rem;
+    }
 }
 
 .project__heading {
@@ -88,6 +93,14 @@
         flex-basis: 100%;
         text-align: left;
     }
+    @media (min-width: 1280px){
+        .title {
+            font-size: 1.25rem;
+        }
+        .subtitle {
+            font-size: 1.85rem;
+        }
+    }
 }
 
 .project__description {
@@ -106,7 +119,7 @@
     line-height: 1.85rem;
     margin-top: 0;
     @media (min-width: 1024px) {
-        font-size: 1.25rem;
+        font-size: 1.15rem;
         line-height: 2rem;
     }
 }

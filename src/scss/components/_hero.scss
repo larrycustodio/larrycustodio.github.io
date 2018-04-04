@@ -12,11 +12,14 @@
         @media (min-width: 768px) {
             grid-template-columns: 2fr $spacer-xsmall 1fr;
             grid-template-rows: $spacer auto $spacer;
-            min-height: 50vh;
+            min-height: 75vh;
         }
         @media (min-width: 1024px) {
             padding: $spacer $spacer-xlarge;
             grid-template-columns: 2fr $spacer 1fr;
+        }
+        @media (min-width: 1280px){
+            min-height: 70vh;
         }
     }
 }

@@ -18,7 +18,7 @@ class HeroContainer {
             return (50 * Math.pow(input, 0.5)) + offset;
         }
         function scrollDown() {
-            if (yout >= projectTop) {
+            if (yout >= projectTop * 0.8) {
                 clearInterval(scrollInterval);
             }
             xo = xo + 1;
