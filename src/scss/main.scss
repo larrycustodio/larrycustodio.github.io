@@ -1,3 +1,4 @@
+@import "normalize";
 @import "variables";
 @import "typography";
 
@@ -35,3 +36,5 @@ button:focus {
 @import "components/hero";
 @import "components/work-section";
 @import "components/images";
+
+@import "animations";
