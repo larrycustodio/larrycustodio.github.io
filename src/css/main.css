@@ -610,6 +610,14 @@ body {
     opacity: 1;
     top: 0; } }
 
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    left: -25%; }
+  100% {
+    opacity: 1;
+    left: 0; } }
+
 @keyframes revealRight {
   0% {
     width: 100%; }
@@ -617,18 +625,21 @@ body {
     width: 0%; } }
 
 .animate.slideDown {
-  animation: slideDown 800ms cubic-bezier(0, 0, 0.18, 0.99) forwards;
+  animation: slideDown 800ms cubic-bezier(0.44, 0, 0.18, 0.99) forwards;
   position: relative;
   opacity: 0; }
 
-.animate.slideUp {
-  animation: slideUp 750ms cubic-bezier(0, 0, 0.18, 0.99) forwards;
+.animate.slideLeft {
+  animation: slideLeft 950ms cubic-bezier(0.44, 0, 0.18, 0.99) forwards;
+  position: relative;
   opacity: 0; }
+  .animate.slideLeft.d500 {
+    animation-delay: 500ms; }
 
 .animate.revealRight {
   position: relative; }
   .animate.revealRight:after {
-    animation: revealRight 750ms cubic-bezier(0, 0, 0.18, 0.99) 700ms forwards;
+    animation: revealRight 750ms cubic-bezier(0.44, 0, 0.18, 0.99) forwards;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -636,3 +647,7 @@ body {
     content: "";
     right: 0;
     top: 0; }
+  .animate.revealRight.d750:after {
+    animation-delay: 750ms; }
+  .animate.revealRight.d900:after {
+    animation-delay: 900ms; }
