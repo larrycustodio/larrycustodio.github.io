@@ -9,8 +9,39 @@
 .project__container {
     color: $text-main-color;
     flex: 1 0 50%;
+    margin: 0.75rem;
+    padding: 4.5vh 7.5vw;
+    position: relative;
     text-align: center;
-    padding: 4.5vh 3vw;
+    // Container modifiers - dynamic borders
+    .border {
+        position: absolute;
+        background-color: $light-blue;
+        &.border__top{
+            top: 0%;
+        }
+        &.border__bottom {
+            bottom: 0%;
+        }
+        &.border__left {
+            left: 1%;
+        }
+        &.border__right {
+            right: 1%;
+        }
+        &.border--x{
+            width: 98%;
+            height: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &.border--y{
+            width: 2px;
+            height: 99.97%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
 }
 
 .project__title {
@@ -63,5 +94,3 @@
     display: inline-block;
     margin: 0 1.0rem 0.5rem; 
 }
-
-// Container modifiers - dynamic borders

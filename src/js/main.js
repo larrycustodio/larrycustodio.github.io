@@ -6,9 +6,14 @@ class ProjectsContainer {
     addContainerBorders() {
         if (!!this.projects.length) {
             [...this.projects].forEach(project => {
-                ['border--t', 'border--b', 'border--l', 'border--r'].forEach(border => {
+                [
+                    { position: 'top', coord: 'x' },
+                    { position: 'bottom', coord: 'x' },
+                    { position: 'left', coord: 'y' },
+                    { position: 'right', coord: 'y' }
+                ].forEach(border => {
                     const newBorderElem = document.createElement('div');
-                    newBorderElem.className = `border ${border}`;
+                    newBorderElem.className = `border border__${border.position} border--${border.coord}`;
                     project.appendChild(newBorderElem);
                 });
             })
