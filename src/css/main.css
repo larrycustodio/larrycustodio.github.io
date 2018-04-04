@@ -187,22 +187,33 @@ body {
       top: 0%; }
     .project__container > .border.border__bottom {
       bottom: 0%; }
-    .project__container > .border.border__left {
+    .project__container > .border.border__left, .project__container > .border.border__left--overlay {
       left: 1%; }
-    .project__container > .border.border__right {
+    .project__container > .border.border__right, .project__container > .border.border__right--overlay {
       right: 1%; }
     .project__container > .border.border--x {
-      width: 98%;
+      width: 0%;
       height: 2px;
       left: 50%;
-      transform: translateX(-50%); }
+      transform: translateX(-50%);
+      transition: width 650ms ease-out; }
     .project__container > .border.border--y {
       width: 2px;
       height: 99.97%;
       top: 50%;
       transform: translateY(-50%); }
+    .project__container > .border.border__left--overlay, .project__container > .border.border__right--overlay {
+      background-color: white;
+      width: 2px;
+      height: 99.97%;
+      transition: height 325ms ease-out 650ms; }
   .project__container.container--active {
     filter: grayscale(0); }
+    .project__container.container--active > .border--x {
+      width: 98%; }
+    .project__container.container--active > .border__left--overlay,
+    .project__container.container--active > .border__right--overlay {
+      height: 0%; }
   @media (min-width: 1024px) {
     .project__container {
       display: flex;

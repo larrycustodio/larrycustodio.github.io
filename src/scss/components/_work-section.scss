@@ -24,17 +24,20 @@
         &.border__bottom {
             bottom: 0%;
         }
-        &.border__left {
+        &.border__left,
+        &.border__left--overlay {
             left: 1%;
         }
-        &.border__right {
+        &.border__right,
+        &.border__right--overlay {
             right: 1%;
         }
         &.border--x {
-            width: 98%;
+            width: 0%;
             height: 2px;
             left: 50%;
             transform: translateX(-50%);
+            transition: width 650ms ease-out;
         }
         &.border--y {
             width: 2px;
@@ -42,9 +45,23 @@
             top: 50%;
             transform: translateY(-50%);
         }
+        &.border__left--overlay,
+        &.border__right--overlay {
+            background-color: $white;
+            width: 2px;
+            height: 99.97%;
+            transition: height 325ms ease-out 650ms;
+        }
     }
     &.container--active{
-        filter: grayscale(0);   
+        filter: grayscale(0);
+        &>.border--x{
+            width: 98%;
+        }
+        &>.border__left--overlay,
+        &>.border__right--overlay {
+            height: 0%;
+        }
     }
     @media (min-width: 1024px) {
         display: flex;

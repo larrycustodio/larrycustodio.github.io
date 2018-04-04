@@ -16,7 +16,10 @@ class ProjectsContainer {
                     { position: 'top', coord: 'x' },
                     { position: 'bottom', coord: 'x' },
                     { position: 'left', coord: 'y' },
-                    { position: 'right', coord: 'y' }
+                    { position: 'left--overlay', coord: 'y' },
+                    { position: 'right', coord: 'y' },
+                    { position: 'right--overlay', coord: 'y' },
+
                 ].forEach(border => {
                     const newBorderElem = document.createElement('div');
                     newBorderElem.className = `border border__${border.position} border--${border.coord}`;
@@ -40,7 +43,7 @@ class ProjectsContainer {
             // Once it's within conditional bounds, toggle .container--active on container
             // and toggle border--active on container
             const isContainerInView = this.scrollWindow >= (project.offsetTop * 0.5);
-            if(isContainerInView){
+            if (isContainerInView) {
                 project.classList.add('container--active');
             }
         });
@@ -50,7 +53,7 @@ class ProjectsContainer {
         this.ticking = true;
     }
 
-    updateContainerClass(){
+    updateContainerClass() {
         console.log(this.scrollY);
     }
 
@@ -60,7 +63,5 @@ class ProjectsContainer {
     }
 };
 
-window.addEventListener('load', event => {
-    const Projects = new ProjectsContainer;
-    Projects.init();
-})
+const Projects = new ProjectsContainer;
+Projects.init();

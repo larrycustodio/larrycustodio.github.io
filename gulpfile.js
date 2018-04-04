@@ -35,7 +35,7 @@ gulp.task('build-css', ['build-sass'], () =>
 );
 
 gulp.task('build-js', () =>
-    gulp.src('src/js/*.js')
+    gulp.src('src/js/**/*.js')
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(babel({
@@ -69,7 +69,7 @@ gulp.task('js-watch', ['build-js'], done => {
     done();
 });
 
-gulp.task('watch', () => {
+gulp.task('watch', ['build-html', 'fonts', 'build-css', 'build-js'], () => {
     browserSync.init({
         proxy: "127.0.0.1:8081"
     });
