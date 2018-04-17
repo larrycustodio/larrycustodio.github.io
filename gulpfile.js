@@ -13,7 +13,7 @@ const browserSync = require('browser-sync').create();
 gulp.task('build-html', () =>
     gulp.src('src/*.html')
         .pipe(htmlmin({ collapseWhitespace: true }))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('./'))
 );
 
 gulp.task('build-sass', () =>
